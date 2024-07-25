@@ -36,12 +36,12 @@
 
     /* Style for full screen video background */
     .video-background {
-      position: absolute;
+      position: fixed;
       right: 0;
-      bottom: 100px; /* Adjust this value to compensate for the top shift */
+      bottom: -100px; /* Adjust this value to compensate for the top shift */
       top: 0px; /* Adjust this value to move the video down */
       min-width: 100%;
-      min-height: calc(100% + 50px); /* Adjust this value accordingly */
+      min-height: 100%; /* Adjust this value accordingly */
       z-index: -1;
       object-fit: cover;
     }
