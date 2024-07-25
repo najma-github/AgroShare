@@ -1,3 +1,4 @@
+/*
 body {
     background-color: #f8f9fa;
     color: #333;
@@ -21,7 +22,7 @@ body {
 
 .btn-toggle:not(.active) {
     background-color: #cdf0d0; /* Light green for Farmers */
-    color: #333;
+    color: #333; 
 }
 
 .btn-toggle.active:focus, .btn-toggle.active:hover {
@@ -38,7 +39,7 @@ body {
 }
 
 .text-green {
-    color: #28a745; /* Green color for links, adjust as per your theme */
+    color: #28a745; Green color for links, adjust as per your theme */
 }
 
 .forgot-password {
@@ -68,16 +69,25 @@ body {
     box-shadow: none; /* Remove default box-shadow */
 }
 
-.btn-success {
-    background-color: #28a745; /* Green color for "Sign In" button */
-    border-color: #28a745; /* Match the border color to button color */
+/* Contact button*/
+.btn-green {
+    display: inline-block;
+    padding: 14px 28px; /* Adjusted padding for a snug fit 
+    background-color: green;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%; /* Fully rounded corners 
+    border: 2px solid green;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 4px 2px;
 }
 
-.btn-success:hover {
-    background-color: #218838; /* Darker shade of green on hover */
-    border-color: #1e7e34; /* Darker border color on hover */
+.btn-green:hover {
+    background-color: white;
+    color: green;
 }
-
-.btn-success:focus {
-    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5); /* Adjust focus state if needed */
-}
+*/

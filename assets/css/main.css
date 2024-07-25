@@ -507,7 +507,7 @@ h6 {
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  max-height: 20px;
   margin-right: 6px;
 }
 
@@ -608,7 +608,7 @@ h6 {
   text-align: center;
   width: 36px;
   height: 36px;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 
 .footer .social-links a:hover {
@@ -616,6 +616,11 @@ h6 {
   background: var(--accent-color);
   text-decoration: none;
 }
+
+.footer {
+  background: #059652;
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -2267,3 +2272,99 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/* Add this to your main CSS file */
+.btn-green {
+  display: inline-block;
+  padding: 155px 20px; /* Padding to fit the text and create a button effect */
+  background-color: rgb(191, 243, 191);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 35px; /* Rounded corners */
+  border: 2px solid green; /* Border with the same color as the background */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 16px; /* Adjust font size if needed */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.btn-green:hover {
+  background-color: white;
+  color: green;
+}
+
+/* produtcs css */
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.btn-toggle {
+  border-radius: 40px; /* Rounded corners */
+  font-weight: bold;
+  width: 180px; /* Adjust width as needed */
+}
+
+.btn-toggle.active {
+  background-color: #28a745; /* Dark green for Elderly Care Home */
+  color: white;
+}
+
+.btn-toggle:not(.active) {
+  background-color: #cdf0d0; /* Light green for Farmers */
+  color: #333;
+}
+
+.btn-toggle.active:focus, .btn-toggle.active:hover {
+  background-color: #28a745;
+  color: #333;
+}
+
+.text-center a {
+  color: #28a745;
+}
+
+.text-center a:hover {
+  text-decoration: underline;
+}
+
+.text-green {
+  color: #28a745; /* Green color for links, adjust as per your theme */
+}
+
+.forgot-password {
+  float: right;
+  margin-right: 8px; /* Adjust alignment */
+  margin-top: 0; /* Reset top margin */
+}
+
+.form-check-label {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.form-check-label .forgot-password {
+  margin-left: auto; /* Push "Forgot password?" link to the right */
+} 
+
+.form-check-label .form-check-input {
+  margin: 0; /* Reset any default margin */
+  vertical-align: middle; /* Adjust vertical alignment if needed */
+}
+
+/* Custom checkbox style */
+.form-check-input:checked {
+  background-color: #28a745; /* Green color for the checkbox tick */
+  border-color: #28a745; /* Match the border color to checkbox tick color */
+  box-shadow: none; /* Remove default box-shadow */
+}
+
+/* Finish products style css */
+
+
