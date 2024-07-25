@@ -2367,4 +2367,42 @@ body {
 
 /* Finish products style css */
 
+/* General styling for the dropdowns "UNWRAP" in Product view page*/
+
+.form-control {
+  background-color: #d4edda; /* Light green background */
+  border: 1px solid #ccc; /* Light gray border */
+  color: #155724; /* Dark green text color */
+  font-size: 0.875rem; /* Small text size */
+  border-radius: 9999px; /* Rounded corners */
+  padding: 0.5em; /* Padding inside the select */
+  width: 15%; /* Full width */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition for background color */
+}
+
+.form-control:hover {
+  background-color: #c3e6cb; /* Slightly darker green on hover */
+}
+
+/* Custom styling for the button */
+.btn-filter {
+  background-color: #155724; /* Dark green background */
+  color: #fff; /* White text color */
+  font-weight: 500; /* Medium font weight */
+  border-radius: 9999px; /* Rounded corners */
+  font-size: 0.875rem; /* Small text size */
+  padding: 0.5em 1em; /* Padding inside the button */
+  text-align: center; /* Center text inside the button */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition for background color */
+  border: none; /* Remove default border */
+}
+
+.btn-filter:hover {
+  background-color: #004d00; /* Slightly darker green on hover */
+}
+
+.btn-filter:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 4px rgba(29, 155, 37, 0.4); /* Green focus ring */
+}
 

@@ -69,21 +69,31 @@
                             </div>
                             <div class="col-6"></div>
                             
-                            <div class="row g-4">
-                                <div class="col-md-6 col-lg-3 mb-3">
-                                    <select class="form-control">
-                                        <option value="">Select Province</option>
-                                        <option value="province1">Province 1</option>
-                                        <option value="province2">Province 2</option>
-                                        <option value="province3">Province 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6 col-lg-3 mb-3">
-                                    <select class="form-control">
-                                        <option value="">Select Farm Type</option>
-                                        <option value="fruit_vegetable">Fruit and Vegetable</option>
-                                        <option value="dairy">Dairy</option>
-                                    </select>
+                            
+                                    <div class="container mx-auto px-4 py-1">
+                                        <div class="flex items-center justify-center space-x-10">
+                                            <div class="custom-select">
+                                                <select id="province" class="form-control">
+                                                    <option value="" disabled selected hidden>Select Province</option>
+                                                    <option value="province1">Province 1</option>
+                                                    <option value="province2">Province 2</option>
+                                                    <option value="province3">Province 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="custom-select">
+                                                <select id="type" class="form-control">
+                                                    <option value="" disabled selected hidden>Select Type</option>
+                                                    <option value="fruits">Fruits</option>
+                                                    <option value="vegetables">Vegetables</option>
+                                                    <option value="dairy">Dairy</option>
+                                                    <option value="mixed">Mixed</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <button type="button" onclick="resetSelects()" class="btn-filter">Filter</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>      
 
@@ -95,7 +105,7 @@
                                 
                                 </div> 
                             </div> 
-                            <div class="col-lg-9">
+                            <div class="col-lg-13">
                                 <div class="row g-4 justify-content-center">
                                     <div class="col-md-6 col-lg-6 col-xl-4">
                                         <div class="rounded position-relative fruite-item">
@@ -103,12 +113,12 @@
                                                 <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
                                             <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
                                                 <h4>Grapes</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -123,8 +133,8 @@
                                                 <h4>Grapes</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -139,8 +149,8 @@
                                                 <h4>Raspberries</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -155,8 +165,8 @@
                                                 <h4>Apricots</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -171,8 +181,8 @@
                                                 <h4>Banana</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -187,8 +197,8 @@
                                                 <h4>Oranges</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -203,8 +213,8 @@
                                                 <h4>Raspberries</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -219,8 +229,8 @@
                                                 <h4>Grapes</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -235,8 +245,8 @@
                                                 <h4>Oranges</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
                                                 </div>
                                             </div>
                                         </div>
