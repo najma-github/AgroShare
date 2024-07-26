@@ -2376,7 +2376,18 @@ body {
   font-size: 0.875rem; /* Small text size */
   border-radius: 9999px; /* Rounded corners */
   padding: 0.5em; /* Padding inside the select */
-  width: 15%; /* Full width */
+  width: 100%; /* Full width */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition for background color */
+}
+
+.form-control-product {
+  background-color: #d4edda; /* Light green background */
+  border: 1px solid #ccc; /* Light gray border */
+  color: #155724; /* Dark green text color */
+  font-size: 0.875rem; /* Small text size */
+  border-radius: 9999px; /* Rounded corners */
+  padding: 0.5em; /* Padding inside the select */
+  width: 150px; /* Full width */
   transition: background-color 0.2s ease-in-out; /* Smooth transition for background color */
 }
 

@@ -11,11 +11,25 @@
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet">
+  
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Marcellus:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +40,9 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  
 
 </head>
 
@@ -43,9 +60,8 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">Products</a></li>
+          <li><a href="Products.html">Products</a></li>
           <li><a href="blog.html">Blog</a></li>
-          
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -56,32 +72,23 @@
   </header>
 
         <!-- Fruits Shop Start-->
-        <div class="container-fluid fruite py-5">
-            <div class="container py-5">
+        <div class="container-fluid fruite py-30" style="padding-top: 10px;">
+            <div class="container py- 0">
                 <!-- <h1 class="mb-4">Fresh fruits shop</h1> -->
                 <div class="row g-4">
                     <div class="col-lg-12">
                         <div class="row g-4">
-                            <div class="col-xl-3">
-                                <div class="input-group w-100 mx-auto d-flex">
-                                    
-                                </div>
-                            </div>
-                            <div class="col-6"></div>
                             
-                            
-                                    <div class="container mx-auto px-4 py-1">
-                                        <div class="flex items-center justify-center space-x-10">
-                                            <div class="custom-select">
-                                                <select id="province" class="form-control">
+                                    <div class="container mx-auto py-5">
+                                        <div class="d-flex">
+                                            <div class="d-flex custom-select  mx-2">
+                                                <select id="province" class="form-control-product  mx-2">
                                                     <option value="" disabled selected hidden>Select Province</option>
-                                                    <option value="province1">Province 1</option>
-                                                    <option value="province2">Province 2</option>
-                                                    <option value="province3">Province 3</option>
+                                                    <option value="province1">Nothern</option>
+                                                    <option value="province2">Nothern Central</option>
+                                                    <option value="province3">Nothern Western</option>
                                                 </select>
-                                            </div>
-                                            <div class="custom-select">
-                                                <select id="type" class="form-control">
+                                                <select id="type" class="form-control-product">
                                                     <option value="" disabled selected hidden>Select Type</option>
                                                     <option value="fruits">Fruits</option>
                                                     <option value="vegetables">Vegetables</option>
@@ -94,8 +101,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>      
 
                         <!-- Ends here -->
                         </div>
@@ -112,15 +117,16 @@
                                             <div class="fruite-img">
                                                 <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Fruits</div>
                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
-                                                <h4>Grapes</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                <h4 style="font-weight: bold; color: #004d00;">Fruitful Delights</h4>
+                                                <p style="margin-bottom: 64.6px;">Copenhagen's Surprise Bag</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-6 col-xl-4">
@@ -128,14 +134,16 @@
                                             <div class="fruite-img">
                                                 <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Grapes</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                            <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Vegetables</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
+                                                <h4 style="font-weight: bold; color: #004d00;">Veggie Vault</h4>
+                                                <p style="margin-bottom: 64.6px;">Wagolla Farm's Surprise Bag</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
                                                 </div>
+                                                
+                                                                       
                                             </div>
                                         </div>
                                     </div>
@@ -144,10 +152,10 @@
                                             <div class="fruite-img">
                                                 <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Raspberries</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                            <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Dairy</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
+                                                <h4 style="font-weight: bold; color: #004d00;">Milk & More</h4>
+                                                <p style="margin-bottom: 64.6px;">MNA Farm's Surprise Bag</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
@@ -160,10 +168,10 @@
                                             <div class="fruite-img">
                                                 <img src="img/fruite-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Apricots</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                            <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Mixed</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
+                                                <h4 style="font-weight: bold; color: #004d00;">Fresh Fusion Bundle</h4>
+                                                <p style="margin-bottom: 64.6px;">Midigama's Surprise Bag</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
@@ -176,10 +184,10 @@
                                             <div class="fruite-img">
                                                 <img src="img/fruite-item-3.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Banana</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                            <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Vegetables</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
+                                                <h4 style="font-weight: bold; color: #004d00;">Veggie Treasure</h4>
+                                                <p style="margin-bottom: 64.6px;">Green Joys's Surprise Bag</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
@@ -192,10 +200,10 @@
                                             <div class="fruite-img">
                                                 <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Oranges</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                            <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Fruits</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
+                                                <h4 style="font-weight: bold; color: #004d00;">Fruit Fantasy</h4>
+                                                <p style="margin-bottom: 64.6px;">Midigama's Surprise Bag</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
@@ -208,10 +216,10 @@
                                             <div class="fruite-img">
                                                 <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Raspberries</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                            <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Mixed</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
+                                                <h4 style="font-weight: bold; color: #004d00;">Whole Food Wonder</h4>
+                                                <p style="margin-bottom: 64.6px;">Midigama's Surprise Bag</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
@@ -224,10 +232,10 @@
                                             <div class="fruite-img">
                                                 <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Grapes</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                            <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Dairy</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
+                                                <h4 style="font-weight: bold; color: #004d00;">Dairy Essentials</h4>
+                                                <p style="margin-bottom: 64.6px;">Royal Dairy Farm's Surprise Bag</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
@@ -240,10 +248,10 @@
                                             <div class="fruite-img">
                                                 <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Oranges</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                            <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Fruits</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
+                                                <h4 style="font-weight: bold; color: #004d00;">Fruit Frenzy</h4>
+                                                <p style="margin-bottom: 64.6px;">Jagro's Surprise Bag</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <!-- <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p> -->
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
@@ -252,7 +260,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="pagination d-flex justify-content-center mt-5">
+                                        <div class="pagination d-flex justify-content-center mt-5 mb-5">
                                             <a href="#" class="rounded">&laquo;</a>
                                             <a href="#" class="active rounded">1</a>
                                             <a href="#" class="rounded">2</a>
