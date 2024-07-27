@@ -125,10 +125,15 @@
                       </div>
                   </div>
                   <div class="col-lg-6">
-                      <h4 class="fw-bold mb-3">Fruitful Delights</h4>
-                      <p class="mb-3">Category: Fruits</p>
-                      <p class="mb-4">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
-                      <p class="mb-4">Suspendisse ultricies nisi vel quam suscipit. Sabertooth peacock flounder; chain pickerel hatchetfish, pencilfish snailfish</p>
+                      <h4 class="fw-bold mb-3" >Fruitful Delights</h4>
+                      <p class="mb-3" style="font-weight: bold;">Category: Fruits</p>
+                      <p>Banana <br>
+                         Mango<br>
+                         Pineapple <br>
+                         Mangoosteen <br>
+                         Orange<br>
+                         Avacado <br>
+                         Guava</p>
                   </div>
               </div>
           </div>
@@ -138,24 +143,28 @@
               <h5 class="text-center fw-bold">Are You Satisfied With the Products Listed?</h5>
           </div>
       </div>
-      <div class="row justify-content-center mt-4">
-          <div class="col-md-3 mb-3">
-              <label for="date" class="form-label">Choose Date</label>
-              <input type="date" class="form-control" id="date" name="date">
-          </div>
-          <div class="col-md-3 mb-3">
-              <label for="time" class="form-label">Choose Time</label>
-              <select class="form-control" id="time" name="time">
-                  <option value="9-11AM">9 AM - 11 AM</option>
-                  <option value="1-3PM">1 PM - 3 PM</option>
-                  <option value="5-7PM">5 PM - 7 PM</option>
-              </select>
-          </div>
-          <div class="col-md-3 mb-3">
-              <label for="phone" class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number"
-                     pattern="\d{3}-\d{3}-\d{4}" title="Please match the requested format: 012-345-6789" required>
-          </div>
+      <div class="container mt-5">
+        <form id="reservationForm">
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-3 mb-3">
+                    <label for="date" class="form-label">Choose Date</label>
+                    <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="time" class="form-label">Choose Time</label>
+                    <select class="form-control" id="time" name="time" required>
+                        <option value="" disabled selected>Select a time</option>
+                        <option value="9-11AM">9 AM - 11 AM</option>
+                        <option value="1-3PM">1 PM - 3 PM</option>
+                        <option value="5-7PM">5 PM - 7 PM</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number"
+                           pattern="\d{3}-\d{3}-\d{4}" title="Please match the requested format: 012-345-6789" required>
+                </div>
+            </div>
       </div>
       <!-- Reserve Button Start -->
       <div class="row justify-content-center mt-4">
@@ -286,36 +295,98 @@
     <script src="js/main.js"></script>
 
     <!-- Modal Structure -->
-<div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body text-center">
-        <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
-        <p>You Just Saved a Meal</p>
-        <p>Your Reservation Number: <span id="reservationNumber"></span></p>
-        <button type="button" class="btn btn-close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-body text-center">
+                  <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
+                  <p>You Just Saved a Meal</p>
+                  <p>Your Reservation Number: <span id="reservationNumber"></span></p>
+                  <a id="downloadLink" href="#" download="reservation.png" class="btn btn-primary mt-3">Download</a>
+                  <button type="button" class="btn btn-close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+          </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<!-- JavaScript to Generate Reservation Number -->
+<!-- JavaScript to Generate Reservation Number, Handle Form Submission, and Download File -->
 <script>
   // Function to generate a random 11-digit number
   function generateReservationNumber() {
     return Math.floor(10000000000 + Math.random() * 90000000000);
   }
 
-  // Function to update the reservation number when the modal is shown
+  // Function to update the reservation number and prepare the PNG image for download
   function updateReservationNumber() {
     const reservationNumber = generateReservationNumber();
     document.getElementById('reservationNumber').textContent = reservationNumber;
+
+  // Create file content as text
+  const text = `Thank You!\nYou Just Saved a Meal\n\nYour Reservation Number: ${reservationNumber}`;
+    
+    // Create a canvas element
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    
+    // Set canvas size
+    canvas.width = 1080;
+    canvas.height = 1080;
+
+    // Fill canvas background with white color
+    context.fillStyle = 'white';
+    
+    // Set font properties
+    context.font = '10px Arial';
+    context.fillStyle = 'dark';
+    context.textAlign = 'center';
+    
+    // Draw text on canvas
+    context.fillText(text, canvas.width / 2, canvas.height / 2);
+    
+    // Convert canvas to PNG
+    const imageUrl = canvas.toDataURL('image/png');
+    
+    // Create a Blob from the image URL
+    const blob = dataURLtoBlob(imageUrl);
+    const url = URL.createObjectURL(blob);
+    
+    // Update download link
+    const downloadLink = document.getElementById('downloadLink');
+    downloadLink.href = url;
+    downloadLink.download = 'reservation.png'; // Name of the downloaded file
   }
 
+  // Helper function to convert dataURL to Blob
+  function dataURLtoBlob(dataURL) {
+    const [header, data] = dataURL.split(',');
+    const mimeString = header.split(':')[1].split(';')[0];
+    const byteString = atob(data);
+    const arrayBuffer = new ArrayBuffer(byteString.length);
+    const uint8Array = new Uint8Array(arrayBuffer);
+    for (let i = 0; i < byteString.length; i++) {
+      uint8Array[i] = byteString.charCodeAt(i);
+    }
+    return new Blob([arrayBuffer], { type: mimeString });
+  }
+  
   // Add event listener to update reservation number when the modal is about to be shown
-  var thankYouModal = document.getElementById('thankYouModal');
-  thankYouModal.addEventListener('show.bs.modal', updateReservationNumber);
+  document.getElementById('thankYouModal').addEventListener('show.bs.modal', updateReservationNumber);
+
+  // Handle form submission
+  document.getElementById('reservationForm').addEventListener('submit', function(event) {
+    // Prevent form from submitting if validation fails
+    if (!this.checkValidity()) {
+      event.preventDefault(); // Prevent the form from submitting
+      event.stopPropagation(); // Stop further event propagation
+    } else {
+      // If the form is valid, show the modal
+      var modalInstance = new bootstrap.Modal(document.getElementById('thankYouModal'));
+      modalInstance.show();
+    }
+
+    this.classList.add('was-validated'); // Add validation feedback
+  }, false);
 </script>
+
 
 
     </body>
