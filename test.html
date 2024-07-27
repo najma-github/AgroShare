@@ -1,129 +1,81 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title> User Portal | AgroShare </title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Marcellus:wght@400&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login and Signup</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Updated Font Awesome -->
-  <link href="assets/css/main.css" rel="stylesheet"> <!-- Link to your custom CSS file -->
+  <title>Farmer Registration</title>
+  <!-- Firebase SDK -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyB-z9SNypbmpCfY3yzrVyaFJnAVZnCJ5IE",
+      authDomain: "agroshare-project.firebaseapp.com",
+      databaseURL: "https://agroshare-project-default-rtdb.firebaseio.com",
+      projectId: "agroshare-project",
+      storageBucket: "agroshare-project.appspot.com",
+      messagingSenderId: "444750909875",
+      appId: "1:444750909875:web:68372fafa9a6f77433bbc6",
+      measurementId: "G-WBVY2TF663"
+    };
 
-  <style>
-    .icon {
-      color: green;
-      font-size: 4.3em; /* Adjust this value to make the icon larger or smaller */
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+    const db = getFirestore();
+
+    // Function to handle the registration form submission
+    async function registerFarmer(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const name = document.getElementById("name").value;
+      const farmName = document.getElementById("farmName").value;
+      const location = document.getElementById("location").value;
+
+      try {
+        // Create user with email and password
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+
+        // Save additional user information to Firestore
+        await addDoc(collection(db, "farmers"), {
+          uid: user.uid,
+          name: name,
+          farmName: farmName,
+          location: location,
+          email: email
+        });
+
+        alert("Farmer registered successfully!");
+      } catch (error) {
+        console.error("Error registering farmer: ", error);
+        alert("Error registering farmer: " + error.message);
+      }
     }
-
-    /* Style for full screen video background */
-    .video-background {
-      position: fixed;
-      right: 4;
-      left: 1;
-      bottom: -10px; /* Adjust this value to compensate for the top shift */
-      top: -350px; /* Adjust this value to move the video down */
-      min-width: 100%;
-      min-height: 100%; 
-      z-index: -1;
-      object-fit: cover;
-    }
-
-    /* Optional: To ensure the content is above the video */
-    .content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .header {
-      position: relative;
-      z-index: 4;
-    }
-
-    /* Styles for form container */
-    .form-container {
-      background-color: rgba(144, 238, 144, 0.5); /* Light green with transparency */
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-  </style>
-
+  </script>
 </head>
-
-<body class="products-page">
-  <!-- Video Background -->
-  <video autoplay muted loop class="video-background">
-    <source src="C:\Users\Najma\Documents\ANC\Research Final\AgroShare\assets\Video\8540468-hd_1920_1080_30fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <!-- Content goes here -->
-  <div class="content">
-    <header id="header" class="header d-flex align-items-center position-relative">
-      <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-        <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="assets/img/logo.png" alt="AgriCulture">
-          <!-- <h1 class="sitename">AgriCulture</h1>  -->
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html"><i class="fas fa-home icon"></i></a></li>
-            <!-- <li><a href="Products.html" active>Products</a></li>
-            <li><a href="blog.html">Blog</a></li>-->
-            <li><a href="contact.html"><i class="fas fa-address-book icon"></i> </a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-      </div>
-    </header>
-  </div>
-
-  <main class="main">
-
-<!-- SIGN IN/SIGN UP -->
-
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
-const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed up 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
+<body>
+  <h1>Farmer Registration</h1>
+  <form id="registrationForm" onsubmit="registerFarmer(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="farmName">Farm Name:</label>
+    <input type="text" id="farmName" name="farmName" required><br><br>
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>
