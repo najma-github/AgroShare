@@ -165,7 +165,7 @@
                           <!-- <label for="farmerRegPassword">Password</label> -->
                           <input type="password" class="form-control" id="farmerRegPassword" placeholder="Enter password">
                       </div>
-                      <button type="submit" id="registerfarmer" class="btn btn-success btn-block">Register</button>
+                      <button type="button" id="registerfarmer" class="btn btn-success btn-block">Register</button>
 
                         <div class="text-center mt-3">
                             <span>Already registered? <a href="#" id="farmerToggleLogin" class="text-green">Login Now</a></span>
@@ -285,7 +285,6 @@
         </div>
     </div>
 </div>
-
 <!-- SIGN IN/SIGN UP-->
 
   </main>
@@ -370,7 +369,7 @@
   registerfarmer.addEventListener('click', (e) => {
     var farmeRegUsername = document.getElementById('farmeRegUsername').value;
     var farmerRegPassword = document.getElementById('farmerRegPassword').value;
-    createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, username, password)
       .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
