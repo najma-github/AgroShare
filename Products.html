@@ -159,7 +159,7 @@
                       <h3 class="text-center mb-3">Farmer Register</h3>
                       <div class="form-group">
                           <!-- <label for="farmerRegUsername">Username</label> -->
-                          <input type="email" class="form-control" id="farmerRegUsername" placeholder="Enter Email"> <br>
+                          <input type="email" class="form-control" id="farmerRegEmail" placeholder="Enter Email"> <br>
                       <!-- </div>
                       <div class="form-group"> -->
                           <!-- <label for="farmerRegPassword">Password</label> -->
@@ -367,8 +367,8 @@
   const auth = getAuth();
   
   registerfarmer.addEventListener('click', (e) => {
-    var farmeRegUsername = document.getElementById('farmeRegUsername').value;
-    var farmerRegPassword = document.getElementById('farmerRegPassword').value;
+    var email = document.getElementById('farmerRegEmail').value;
+    var password = document.getElementById('farmerRegPassword').value;
     createUserWithEmailAndPassword(auth, username, password)
       .then((userCredential) => {
         // Signed up 
