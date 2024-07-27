@@ -366,24 +366,27 @@
   const database = getDatabase(app);
   const auth = getAuth();
   
-  registerfarmer.addEventListener('click', (e) => {
+  // Corrected JavaScript code block for registering a farmer
+
+registerfarmer.addEventListener('click', (e) => {
+    e.preventDefault();  // Prevent form from submitting normally
     var farmerRegEmail = document.getElementById('farmerRegEmail').value;
     var farmerRegPassword = document.getElementById('farmerRegPassword').value;
-    createUserWithEmailAndPassword(auth, username, password)
-      .then((userCredential) => {
-        // Signed up 
-        const user = userCredential.user;
-        alert('user created!');
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
 
-        alert('errorMessage');
-        // ..
-      });
-  });
+    createUserWithEmailAndPassword(auth, farmerRegEmail, farmerRegPassword)
+        .then((userCredential) => {
+            // Signed up 
+            const user = userCredential.user;
+            alert('Farmer registered successfully!');
+            // You can redirect the user or reset the form here if needed
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert('Error: ' + errorMessage);
+        });
+});
+
 
 </script>
 
