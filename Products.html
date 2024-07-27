@@ -130,20 +130,20 @@
                 </div>
                 <!-- Farmer Form -->
                 <div id="farmerForm">
-                    
+                    <!-- Farmer LOGIN -->
                     <form id="farmerLoginForm">
                     <h3 class="text-center mb-3">Farmer Login </h3>
                         <div class="form-group">
-                            <label for="farmer-username">Username</label>
-                            <input type="text" class="form-control" id="farmer-username" placeholder="Enter username" required>
+                            <label for="farmerusername">Username</label>
+                            <input type="text" class="form-control" id="farmerusername" placeholder="Enter username" required>
                         </div>
                         <div class="form-group">
-                            <label for="farmer-password">Password</label>
-                            <input type="password" class="form-control" id="farmer-password" placeholder="Enter password" required>
+                            <label for="farmerpassword">Password</label>
+                            <input type="password" class="form-control" id="farmerpassword" placeholder="Enter password" required>
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="farmer-rememberMe">
-                            <label class="form-check-label" for="farmer-rememberMe">Remember Me</label>
+                            <input type="checkbox" class="form-check-input" id="farmerrememberMe">
+                            <label class="form-check-label" for="farmerrememberMe">Remember Me</label>
                             <span class="forgot-password">
     <a href="#" class="text-green" data-toggle="modal" data-target="#forgotPasswordModal">Forgot password?</a>
 </span>
@@ -154,17 +154,20 @@
                         </div>
                     </form>
                     
+                    <!-- Farmer REGISTER -->
                     <form id="farmerRegisterForm" style="display: none;">
                     <h3 class="text-center mb-3">Farmer Register </h3>
                         <div class="form-group">
-                            <label for="farmer-reg-username">Username</label>
-                            <input type="text" class="form-control" id="farmer-reg-username" placeholder="Enter username">
+                            <label for="farmerRegUsername">Username</label>
+                            <input type="text" class="form-control" id="farmerRegUsername" placeholder="Enter username">
                         </div>
                         <div class="form-group">
-                            <label for="farmer-reg-password">Password</label>
-                            <input type="password" class="form-control" id="farmer-reg-password" placeholder="Enter password">
+                            <label for="farmerRegPassword">Password</label>
+                            <input type="password" class="form-control" id="farmerRegPassword" placeholder="Enter password">
                         </div>
                         <button type="submit" class="btn btn-success btn-block">Register</button>
+                        <input type="submitfarmer" id="registerfarmer" name="registerfarmer_submit" value="RegisterFarmer"/> <!--Register new-->
+
                         <div class="text-center mt-3">
                             <span>Already registered? <a href="#" id="farmerToggleLogin" class="text-green">Login Now</a></span>
                         </div>
@@ -259,6 +262,29 @@
             document.getElementById('toggleFarmer').classList.remove('active');
             document.getElementById('toggleElderly').classList.add('active');
         });
+
+        registerfarmer.addEventListener('click', (e) => {
+          var farmeRegUsername = document.getElementById('farmeRegUsername').value;
+          var farmerRegPassword = document.getElementById('farmerRegPassword').value;
+          createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+              // Signed up 
+              const user = userCredential.user;
+              alert('user created!');
+              // ...
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+
+              alert('errorMessage');
+              // ..
+            });
+        });
+
+
+
+
     </script>
 
 <!-- Add this modal at the end of your body section -->
