@@ -367,8 +367,8 @@
   const auth = getAuth();
   
   registerfarmer.addEventListener('click', (e) => {
-    var email = document.getElementById('farmerRegEmail').value;
-    var password = document.getElementById('farmerRegPassword').value;
+    var farmerRegEmail = document.getElementById('farmerRegEmail').value;
+    var farmerRegPassword = document.getElementById('farmerRegPassword').value;
     createUserWithEmailAndPassword(auth, username, password)
       .then((userCredential) => {
         // Signed up 
