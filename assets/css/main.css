@@ -2395,7 +2395,7 @@ body {
   background-color: #c3e6cb; /* Slightly darker green on hover */
 }
 
-/* Custom styling for the button */
+/* Custom styling for the button FILTER*/
 .btn-filter {
   background-color: #155724; /* Dark green background */
   color: #fff; /* White text color */
@@ -2413,6 +2413,28 @@ body {
 }
 
 .btn-filter:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 4px rgba(29, 155, 37, 0.4); /* Green focus ring */
+}
+
+/* Custom styling for the button RESERVE */
+.btn-reserve {
+  background-color: #155724; /* Dark green background */
+  color: #fff; /* White text color */
+  font-weight: 600; /* Medium font weight */
+  border-radius: 9999px; /* Rounded corners */
+  font-size: 1.1rem; /* Small text size */
+  padding: 0.5em 1em; /* Padding inside the button */
+  text-align: center; /* Center text inside the button */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition for background color */
+  border: none; /* Remove default border */
+}
+
+.btn-reserve:hover {
+  background-color: #ff5420; /* Slightly darker green on hover */
+}
+
+.btn-reserve:focus {
   outline: none; /* Remove default outline */
   box-shadow: 0 0 0 4px rgba(29, 155, 37, 0.4); /* Green focus ring */
 }
