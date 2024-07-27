@@ -889,3 +889,35 @@
     line-height: 35px;
 }
 /*** Footer End ***/
+
+/* Style for the custom close button in Reserve-pop-up */
+.btn-close-custom {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f0f0f0; /* Light background color */
+    border: none;
+    border-radius: 50%; /* Circle shape */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .btn-close-custom::before {
+    content: '×'; /* Cross mark */
+    font-size: 20px;
+    color: #333; /* Dark color for the cross mark */
+    line-height: 1;
+  }
+  
+  .modal-content {
+    position: relative;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
