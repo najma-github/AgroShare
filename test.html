@@ -291,6 +291,28 @@
     });
 
 </script>
+<!-- Add this modal at the end of your body section -->
+<div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="forgotPasswordModalLabel">Request a Password Reset</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="reset-email">Email:</label>
+                        <input type="email" class="form-control" id="reset-email" placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </main>
 </html>
