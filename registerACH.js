@@ -22,8 +22,11 @@ document.getElementById('register-form').addEventListener('submit', (e) => {
         .then((userCredential) => {
             const user = userCredential.user;
             console.log('User registered:', user);
+            alert('Registration successful!'); // Alert message on successful registration
+            window.location.href = 'loginACH.html'; // Redirect to login page
         })
         .catch((error) => {
             console.error('Error registering user:', error);
+            alert('Error registering user: ' + error.message); // Alert message on error
         });
 });

@@ -109,7 +109,7 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="index.html"><i class="fas fa-home icon"></i></a></li>
-            <!-- <li><a href="Products.html" active>Products</a></li>
+            <li><a href="Products.html" active>Products</a></li>
             <li><a href="blog.html">Blog</a></li>-->
             <li><a href="contact.html"><i class="fas fa-address-book icon"></i> </a></li>
           </ul>
@@ -131,7 +131,7 @@
                   <i class="fas fa-seedling"></i> Farmer Register
               </div>
             </div>
-<form id="register-form" onsubmit="event.preventDefault(); window.location.href='product-view.html';">
+<form id="register-form" onsubmit="event.preventDefault(); window.location.href='farmerForm.html';">
             <label for="email">Email:</label><br>
             <input type="email" id="email" style="width: 100%;" required > <br>
             <label for="password">Password:</label> <br>
@@ -172,46 +172,7 @@
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <script>
-        // Farmer Form Toggle
-        document.getElementById('farmerToggleRegister').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('farmerLoginForm').style.display = 'none';
-          document.getElementById('farmerRegisterForm').style.display = 'block';
-        });
-  
-        document.getElementById('farmerToggleLogin').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('farmerLoginForm').style.display = 'block';
-          document.getElementById('farmerRegisterForm').style.display = 'none';
-        });
-  
-        // <!-- // Elderly Care Home Form Toggle
-        document.getElementById('elderlyToggleRegister').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('elderlyLoginForm').style.display = 'none';
-          document.getElementById('elderlyRegisterForm').style.display = 'block';
-        });
-  
-        document.getElementById('elderlyToggleLogin').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('elderlyLoginForm').style.display = 'block';
-          document.getElementById('elderlyRegisterForm').style.display = 'none';
-        }); -->
-  
-        // User Type Toggle
-        document.getElementById('toggleFarmer').addEventListener('click', function () {
-          document.getElementById('farmerForm').style.display = 'block';
-          document.getElementById('elderlyForm').style.display = 'none';
-          document.getElementById('toggleFarmer').classList.add('active');
-          document.getElementById('toggleElderly').classList.remove('active');
-        });
-  
-        document.getElementById('toggleElderly').addEventListener('click', function () {
-          document.getElementById('farmerForm').style.display = 'none';
-          document.getElementById('elderlyForm').style.display = 'block';
-          document.getElementById('toggleFarmer').classList.remove('active');
-          document.getElementById('toggleElderly').classList.add('active');
-        });
+        
       </script>
     </main>
 
@@ -261,6 +222,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
     <script type="module">
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
