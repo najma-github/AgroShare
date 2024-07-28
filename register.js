@@ -52,7 +52,7 @@ document.getElementById('farmerLoginForm').addEventListener('submit', function(e
 // Handle Elderly Care Home Registration
 document.getElementById('elderlyRegisterForm').addEventListener('submit', function(event) {
   event.preventDefault();
-  const email = document.getElementById('elderly-reg-username').value;
+  const email = document.getElementById('elderly-reg-email').value;
   const password = document.getElementById('elderly-reg-password').value;
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -68,7 +68,7 @@ document.getElementById('elderlyRegisterForm').addEventListener('submit', functi
 // Handle Elderly Care Home Login
 document.getElementById('elderlyLoginForm').addEventListener('submit', function(event) {
   event.preventDefault();
-  const email = document.getElementById('elderly-username').value;
+  const email = document.getElementById('elderly-email').value;
   const password = document.getElementById('elderly-password').value;
 
   firebase.auth().signInWithEmailAndPassword(email, password)
