@@ -75,6 +75,8 @@
 
   </style>
 
+  <scritp type = "module" src="register.js" defer></scritp>
+
 </head>
 
 <body class="products-page">
@@ -133,8 +135,8 @@
                     <form id="farmerLoginForm">
                     <h3 class="text-center mb-3">Farmer Login </h3>
                         <div class="form-group">
-                            <label for="farmer-username">Username</label>
-                            <input type="text" class="form-control" id="farmer-username" placeholder="Enter username" required>
+                            <label for="farmer-email">Username</label>
+                            <input type="email" class="form-control" id="farmer-email" placeholder="Enter Email" required>
                         </div>
                         <div class="form-group">
                             <label for="farmer-password">Password</label>
@@ -154,18 +156,17 @@
                     </form>
                     
                     <!-- Farmer Register Form -->
-                    <form id="farmerRegisterForm" style="display: none;">
-                    <h3 class="text-center mb-3">Farmer Register </h3>
-                        <div class="form-group">
-                            <label for="farmer-reg-username">Username</label>
-                            <input type="text" class="form-control" id="farmer-reg-username" placeholder="Enter username">
-                        </div>
-                        <div class="form-group">
-                            <label for="farmer-reg-password">Password</label>
-                            <input type="password" class="form-control" id="farmer-reg-password" placeholder="Enter password">
-                        </div>
-                        <button type="submit" class="btn btn-success btn-block">Register</button>
-                        <div class="text-center mt-3">
+                    <div class="text-center mt-3">
+                          <form id="farmerRegisterForm" style="display: none;">
+                            <h3 class="text-center mb-3">Farmer Register</h3>
+                          
+                            <label for="farmerRegEmail">Email</label>
+                            <input type="email" placeholder="Enter Email" id="farmerRegEmail" required>
+                          
+                            <label for="farmerRregPassword">Password</label>
+                            <input type="password" placeholder="Enter password" id="farmerRegPassword" required>
+                          
+                            <button id="submit" type="submit">Register</button>
                             <span>Already registered? <a href="#" id="farmerToggleLogin" class="text-green">Login Now</a></span>
                         </div>
                     </form>
