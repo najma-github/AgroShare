@@ -15,30 +15,83 @@ const firebaseConfig = {
     appId: "1:1027205635402:web:331c915d866dc7fb77b5b3"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-//submit button
-const submit = document.getElementById('submit');
-submit.addEventListener("click", function (event) {
-    event.preventDefault()
+// Handle Farmer Registration
+document.getElementById('farmerRegisterForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const email = document.getElementById('farmerRegEmail').value;
+  const password = document.getElementById('farmerRegPassword').value;
 
-    //Input
-    const email = document.getElementById('farmerRegEmail').value;
-    const password = document.getElementById('farmerRegPassword').value;
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      alert('Farmer Registered Successfully!');
+      document.getElementById('farmerRegisterForm').reset();
+    })
+    .catch((error) => {
+      alert('Error: ' + error.message);
+    });
+});
 
-    createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed up 
-            const user = userCredential.user;
-            alert("Creating Account")
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            alert(errorMessage)
-            // ..
-        });
+// Handle Farmer Login
+document.getElementById('farmerLoginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const email = document.getElementById('farmer-email').value;
+  const password = document.getElementById('farmer-password').value;
 
-})
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      alert('Farmer Logged In Successfully!');
+      document.getElementById('farmerLoginForm').reset();
+    })
+    .catch((error) => {
+      alert('Error: ' + error.message);
+    });
+});
+
+// Handle Elderly Care Home Registration
+document.getElementById('elderlyRegisterForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const email = document.getElementById('elderly-reg-username').value;
+  const password = document.getElementById('elderly-reg-password').value;
+
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      alert('Elderly Care Home Registered Successfully!');
+      document.getElementById('elderlyRegisterForm').reset();
+    })
+    .catch((error) => {
+      alert('Error: ' + error.message);
+    });
+});
+
+// Handle Elderly Care Home Login
+document.getElementById('elderlyLoginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const email = document.getElementById('elderly-username').value;
+  const password = document.getElementById('elderly-password').value;
+
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      alert('Elderly Care Home Logged In Successfully!');
+      document.getElementById('elderlyLoginForm').reset();
+    })
+    .catch((error) => {
+      alert('Error: ' + error.message);
+    });
+});
+
+// Handle Password Reset
+document.getElementById('forgotPasswordModal').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const email = document.getElementById('reset-email').value;
+
+  firebase.auth().sendPasswordResetEmail(email)
+    .then(() => {
+      alert('Password Reset Email Sent!');
+      document.getElementById('forgotPasswordModal').reset();
+    })
+    .catch((error) => {
+      alert('Error: ' + error.message);
+    });
+});

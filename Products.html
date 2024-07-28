@@ -118,14 +118,12 @@
     </header>
   </div>
 
-  <main class="main">
-    <!-- SIGN IN/SIGN UP -->
-
-    <body>
+  <body>
+    <main class="main">
       <div class="container">
         <div class="row justify-content-center mt-5">
           <div class="col-md-6 form-container">
-
+  
             <div class="text-center mb-4">
               <div class="btn-group" role="group" aria-label="User Type Toggle">
                 <button type="button" class="btn btn-toggle active" id="toggleFarmer">
@@ -135,21 +133,19 @@
                   <i class="fas fa-utensils"></i> Aged Care Home
                 </button>
               </div>
-
             </div>
+  
             <!-- Farmer Form -->
             <div id="farmerForm">
-
               <form id="farmerLoginForm">
-                <h3 class="text-center mb-3">Farmer Login </h3>
+                <h3 class="text-center mb-3">Farmer Login</h3>
                 <div class="form-group">
                   <label for="farmer-email">Username</label>
                   <input type="email" class="form-control" id="farmer-email" placeholder="Enter Email" required>
                 </div>
                 <div class="form-group">
                   <label for="farmer-password">Password</label>
-                  <input type="password" class="form-control" id="farmer-password" placeholder="Enter password"
-                    required>
+                  <input type="password" class="form-control" id="farmer-password" placeholder="Enter password" required>
                 </div>
                 <div class="form-group form-check">
                   <input type="checkbox" class="form-check-input" id="farmer-rememberMe">
@@ -161,32 +157,25 @@
                 </div>
                 <button type="submit" class="btn btn-success btn-block">Sign In</button>
                 <div class="text-center mt-3">
-                  <span>Not registered yet? <a href="#" id="farmerToggleRegister" class="text-green">Register
-                      Now</a></span>
+                  <span>Not registered yet? <a href="#" id="farmerToggleRegister" class="text-green">Register Now</a></span>
                 </div>
               </form>
-
-              <!-- Farmer Register Form -->
-              <div class="text-center mt-3">
-                <form id="farmerRegisterForm" style="display: none;">
-                  <h3 class="text-center mb-3">Farmer Register</h3>
-
-                  <label for="farmerRegEmail">Email</label>
-                  <input type="email" placeholder="Enter Email" id="farmerRegEmail" required>
-
-                  <label for="farmerRregPassword">Password</label>
-                  <input type="password" placeholder="Enter password" id="farmerRegPassword" required>
-
-                  <button id="submit" type="submit">Register</button>
-                  <span>Already registered? <a href="#" id="farmerToggleLogin" class="text-green">Login Now</a></span>
-              </div>
+  
+              <form id="farmerRegisterForm" style="display: none;">
+                <h3 class="text-center mb-3">Farmer Register</h3>
+                <label for="farmerRegEmail">Email</label>
+                <input type="email" class="form-control" id="farmerRegEmail" placeholder="Enter Email" required>
+                <label for="farmerRegPassword">Password</label>
+                <input type="password" class="form-control" id="farmerRegPassword" placeholder="Enter password" required>
+                <button id="farmerSubmit" type="submit" class="btn btn-success btn-block">Register</button>
+                <span>Already registered? <a href="#" id="farmerToggleLogin" class="text-green">Login Now</a></span>
               </form>
             </div>
+  
             <!-- Elderly Care Home Form -->
             <div id="elderlyForm" style="display: none;">
-
               <form id="elderlyLoginForm">
-                <h3 class="text-center mb-3">ACH Login </h3>
+                <h3 class="text-center mb-3">ACH Login</h3>
                 <div class="form-group">
                   <label for="elderly-username">Username</label>
                   <input type="text" class="form-control" id="elderly-username" placeholder="Enter username">
@@ -205,12 +194,11 @@
                 </div>
                 <button type="submit" class="btn btn-success btn-block">Sign In</button>
                 <div class="text-center mt-3">
-                  <span>Not registered yet? <a href="#" id="elderlyToggleRegister" class="text-green">Register
-                      Now</a></span>
+                  <span>Not registered yet? <a href="#" id="elderlyToggleRegister" class="text-green">Register Now</a></span>
                 </div>
               </form>
               <form id="elderlyRegisterForm" style="display: none;">
-                <h3 class="text-center mb-3">ACH Register </h3>
+                <h3 class="text-center mb-3">ACH Register</h3>
                 <div class="form-group">
                   <label for="elderly-reg-username">Username</label>
                   <input type="text" class="form-control" id="elderly-reg-username" placeholder="Enter username">
@@ -225,56 +213,11 @@
                 </div>
               </form>
             </div>
+  
           </div>
         </div>
       </div>
-
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <script>
-        // Farmer Form Toggle
-        document.getElementById('farmerToggleRegister').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('farmerLoginForm').style.display = 'none';
-          document.getElementById('farmerRegisterForm').style.display = 'block';
-        });
-
-        document.getElementById('farmerToggleLogin').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('farmerLoginForm').style.display = 'block';
-          document.getElementById('farmerRegisterForm').style.display = 'none';
-        });
-
-        // Elderly Care Home Form Toggle
-        document.getElementById('elderlyToggleRegister').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('elderlyLoginForm').style.display = 'none';
-          document.getElementById('elderlyRegisterForm').style.display = 'block';
-        });
-
-        document.getElementById('elderlyToggleLogin').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('elderlyLoginForm').style.display = 'block';
-          document.getElementById('elderlyRegisterForm').style.display = 'none';
-        });
-
-        // User Type Toggle
-        document.getElementById('toggleFarmer').addEventListener('click', function () {
-          document.getElementById('farmerForm').style.display = 'block';
-          document.getElementById('elderlyForm').style.display = 'none';
-          document.getElementById('toggleFarmer').classList.add('active');
-          document.getElementById('toggleElderly').classList.remove('active');
-        });
-
-        document.getElementById('toggleElderly').addEventListener('click', function () {
-          document.getElementById('farmerForm').style.display = 'none';
-          document.getElementById('elderlyForm').style.display = 'block';
-          document.getElementById('toggleFarmer').classList.remove('active');
-          document.getElementById('toggleElderly').classList.add('active');
-        });
-      </script>
-      <!-- Add this modal at the end of your body section -->
+  
       <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog"
         aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -297,8 +240,54 @@
           </div>
         </div>
       </div>
-
-  </main>
+  
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script>
+        // Farmer Form Toggle
+        document.getElementById('farmerToggleRegister').addEventListener('click', function (event) {
+          event.preventDefault();
+          document.getElementById('farmerLoginForm').style.display = 'none';
+          document.getElementById('farmerRegisterForm').style.display = 'block';
+        });
+  
+        document.getElementById('farmerToggleLogin').addEventListener('click', function (event) {
+          event.preventDefault();
+          document.getElementById('farmerLoginForm').style.display = 'block';
+          document.getElementById('farmerRegisterForm').style.display = 'none';
+        });
+  
+        // Elderly Care Home Form Toggle
+        document.getElementById('elderlyToggleRegister').addEventListener('click', function (event) {
+          event.preventDefault();
+          document.getElementById('elderlyLoginForm').style.display = 'none';
+          document.getElementById('elderlyRegisterForm').style.display = 'block';
+        });
+  
+        document.getElementById('elderlyToggleLogin').addEventListener('click', function (event) {
+          event.preventDefault();
+          document.getElementById('elderlyLoginForm').style.display = 'block';
+          document.getElementById('elderlyRegisterForm').style.display = 'none';
+        });
+  
+        // User Type Toggle
+        document.getElementById('toggleFarmer').addEventListener('click', function () {
+          document.getElementById('farmerForm').style.display = 'block';
+          document.getElementById('elderlyForm').style.display = 'none';
+          document.getElementById('toggleFarmer').classList.add('active');
+          document.getElementById('toggleElderly').classList.remove('active');
+        });
+  
+        document.getElementById('toggleElderly').addEventListener('click', function () {
+          document.getElementById('farmerForm').style.display = 'none';
+          document.getElementById('elderlyForm').style.display = 'block';
+          document.getElementById('toggleFarmer').classList.remove('active');
+          document.getElementById('toggleElderly').classList.add('active');
+        });
+      </script>
+    </main>
+  </body>
   <div class="mt-5"></div>
   <footer id="footer" class="footer dark-background">
 
