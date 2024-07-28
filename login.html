@@ -119,8 +119,6 @@
       </div>
     </header>
   </div>
-
-  <body>
     <main class="main">
       <div class="container">
         <div class="row justify-content-center mt-5">
@@ -129,98 +127,29 @@
             <div class="text-center mb-4">
               <div class="btn-group" role="group" aria-label="User Type Toggle">
                 <button type="button" class="btn btn-toggle active" id="toggleFarmer">
-                  <i class="fas fa-seedling"></i> Farmer
+                  <i class="fas fa-seedling"></i> Farmer Login
                 </button>
-                <button type="button" class="btn btn-toggle" id="toggleElderly">
-                  <i class="fas fa-utensils"></i> Aged Care Home
-                </button>
+
               </div>
             </div>
   
-            <!-- Farmer Form -->
-            <div id="farmerForm">
-              <form id="farmerLoginForm">
-                <h3 class="text-center mb-3">Farmer Login</h3>
-                <div class="form-group">
-                  <label for="farmerEmail">Email</label>
-                  <input type="email" class="form-control" id="farmerEmail" placeholder="Enter Email" required>
-                </div>
-                <div class="form-group">
-                  <label for="farmerpassword">Password</label>
-                  <input type="password" class="form-control" id="farmerpassword" placeholder="Enter password" required>
-                </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="farmer-rememberMe">
-                  <label class="form-check-label" for="farmer-rememberMe">Remember Me</label>
-                  <span class="forgot-password">
-                    <a href="#" class="text-green" data-toggle="modal" data-target="#forgotPasswordModal">Forgot
-                      password?</a>
-                  </span>
-                </div>
-                <button type="submit" class="btn btn-success btn-block">Sign In</button>
-                <div class="text-center mt-3">
-                  <span>Not registered yet? <a href="#" id="farmerToggleRegister" class="text-green">Register Now</a></span>
-                </div>
-              </form>
-  
-              <form id="farmerRegisterForm" style="display: none;">
-                <h3 class="text-center mb-3">Farmer Register</h3>
-                <label for="farmerRegEmail">Email</label>
-                <input type="email" class="form-control" id="farmerRegEmail" placeholder="Enter Email" required>
-                <label for="farmerRegPassword">Password</label>
-                <input type="password" class="form-control" id="farmerRegPassword" placeholder="Enter password" required>
-                <button id="farmerSubmit" type="submit" class="btn btn-success btn-block">Register</button>
-                <span>Already registered? <a href="#" id="farmerToggleLogin" class="text-green">Login Now</a></span>
-              </form>
-            </div>
-  
-            <!-- Elderly Care Home Form -->
-            <div id="elderlyForm" style="display: none;">
-              <form id="elderlyLoginForm">
-                <h3 class="text-center mb-3">ACH Login</h3>
-                <div class="form-group">
-                  <label for="elderly-email">Email</label>
-                  <input type="email" class="form-control" id="elderly-email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="elderly-password">Password</label>
-                  <input type="password" class="form-control" id="elderly-password" placeholder="Enter password">
-                </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="elderly-rememberMe">
-                  <label class="form-check-label" for="elderly-rememberMe">Remember Me</label>
-                  <span class="forgot-password">
-                    <a href="#" class="text-green" data-toggle="modal" data-target="#forgotPasswordModal">Forgot
-                      password?</a>
-                  </span>
-                </div>
-                <button type="submit" class="btn btn-success btn-block">Sign In</button>
-                <div class="text-center mt-3">
-                  <span>Not registered yet? <a href="#" id="elderlyToggleRegister" class="text-green">Register Now</a></span>
-                </div>
-              </form>
-              <form id="elderlyRegisterForm" style="display: none;">
-                <h3 class="text-center mb-3">ACH Register</h3>
-                <div class="form-group">
-                  <label for="elderly-reg-email">Email</label>
-                  <input type="text" class="form-control" id="elderly-reg-email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="elderly-reg-password">Password</label>
-                  <input type="password" class="form-control" id="elderly-reg-password" placeholder="Enter password">
-                </div>
-                <button type="submit" class="btn btn-success btn-block">Register</button>
-                <div class="text-center mt-3">
-                  <span>Already registered? <a href="#" id="elderlyToggleLogin" class="text-green">Login Now</a></span>
-                </div>
-              </form>
-            </div>
-  
-          </div>
-        </div>
-      </div>
-  
-      <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog"
+        <form id="login-form" onsubmit="event.preventDefault(); window.location.href='product-view.html';">
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" required style="width: 100%;"> <br>
+
+    <label for="password">Password:</label> <br>
+    <input type="password" id="password" required style="width: 100%;"> <br>
+    <div style="text-align: left;"> <br>
+        <button type="submit">Sign In</button>
+    </div>
+</form>
+
+<div style="text-align: center;">
+    Don't have an account?  <a href="register.html">Register</a>
+</div>
+
+
+<div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog"
         aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -261,17 +190,17 @@
         });
   
         // <!-- // Elderly Care Home Form Toggle
-        document.getElementById('elderlyToggleRegister').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('elderlyLoginForm').style.display = 'none';
-          document.getElementById('elderlyRegisterForm').style.display = 'block';
-        });
+        // document.getElementById('elderlyToggleRegister').addEventListener('click', function (event) {
+        //   event.preventDefault();
+        //   document.getElementById('elderlyLoginForm').style.display = 'none';
+        //   document.getElementById('elderlyRegisterForm').style.display = 'block';
+        // });
   
-        document.getElementById('elderlyToggleLogin').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('elderlyLoginForm').style.display = 'block';
-          document.getElementById('elderlyRegisterForm').style.display = 'none';
-        }); -->
+        // document.getElementById('elderlyToggleLogin').addEventListener('click', function (event) {
+        //   event.preventDefault();
+        //   document.getElementById('elderlyLoginForm').style.display = 'block';
+        //   document.getElementById('elderlyRegisterForm').style.display = 'none';
+        // }); -->
   
         // User Type Toggle
         document.getElementById('toggleFarmer').addEventListener('click', function () {
@@ -289,7 +218,7 @@
         });
       </script>
     </main>
-  </body>
+
   <div class="mt-5"></div>
   <footer id="footer" class="footer dark-background">
 
@@ -336,7 +265,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+    </main>
 </body>
 
 </html>
+
