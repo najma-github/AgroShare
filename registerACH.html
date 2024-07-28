@@ -83,7 +83,7 @@
     }
   </style>
 
-  <scritp type="module" src="register.js" defer></scritp>
+  <scritp type="module" src="registerACH.js" defer></scritp>
 
 </head>
 
@@ -120,8 +120,7 @@
     </header>
   </div>
 
-  <body>
-    <main class="main">
+<main class="main">
       <div class="container">
         <div class="row justify-content-center mt-5">
           <div class="col-md-6 form-container">
@@ -129,98 +128,24 @@
             <div class="text-center mb-4">
               <div class="btn-group" role="group" aria-label="User Type Toggle">
                 <button type="button" class="btn btn-toggle active" id="toggleFarmer">
-                  <i class="fas fa-seedling"></i> Farmer
-                </button>
-                <button type="button" class="btn btn-toggle" id="toggleElderly">
-                  <i class="fas fa-utensils"></i> Aged Care Home
-                </button>
+                  <i class="fas fa-seedling"></i> ACH Register
               </div>
             </div>
-  
-            <!-- Farmer Form -->
-            <div id="farmerForm">
-              <form id="farmerLoginForm">
-                <h3 class="text-center mb-3">Farmer Login</h3>
-                <div class="form-group">
-                  <label for="farmerEmail">Email</label>
-                  <input type="email" class="form-control" id="farmerEmail" placeholder="Enter Email" required>
-                </div>
-                <div class="form-group">
-                  <label for="farmerpassword">Password</label>
-                  <input type="password" class="form-control" id="farmerpassword" placeholder="Enter password" required>
-                </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="farmer-rememberMe">
-                  <label class="form-check-label" for="farmer-rememberMe">Remember Me</label>
-                  <span class="forgot-password">
-                    <a href="#" class="text-green" data-toggle="modal" data-target="#forgotPasswordModal">Forgot
-                      password?</a>
-                  </span>
-                </div>
-                <button type="submit" class="btn btn-success btn-block">Sign In</button>
-                <div class="text-center mt-3">
-                  <span>Not registered yet? <a href="#" id="farmerToggleRegister" class="text-green">Register Now</a></span>
-                </div>
-              </form>
-  
-              <form id="farmerRegisterForm" style="display: none;">
-                <h3 class="text-center mb-3">Farmer Register</h3>
-                <label for="farmerRegEmail">Email</label>
-                <input type="email" class="form-control" id="farmerRegEmail" placeholder="Enter Email" required>
-                <label for="farmerRegPassword">Password</label>
-                <input type="password" class="form-control" id="farmerRegPassword" placeholder="Enter password" required>
-                <button id="farmerSubmit" type="submit" class="btn btn-success btn-block">Register</button>
-                <span>Already registered? <a href="#" id="farmerToggleLogin" class="text-green">Login Now</a></span>
-              </form>
-            </div>
-  
-            <!-- Elderly Care Home Form -->
-            <div id="elderlyForm" style="display: none;">
-              <form id="elderlyLoginForm">
-                <h3 class="text-center mb-3">ACH Login</h3>
-                <div class="form-group">
-                  <label for="elderly-email">Email</label>
-                  <input type="email" class="form-control" id="elderly-email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="elderly-password">Password</label>
-                  <input type="password" class="form-control" id="elderly-password" placeholder="Enter password">
-                </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="elderly-rememberMe">
-                  <label class="form-check-label" for="elderly-rememberMe">Remember Me</label>
-                  <span class="forgot-password">
-                    <a href="#" class="text-green" data-toggle="modal" data-target="#forgotPasswordModal">Forgot
-                      password?</a>
-                  </span>
-                </div>
-                <button type="submit" class="btn btn-success btn-block">Sign In</button>
-                <div class="text-center mt-3">
-                  <span>Not registered yet? <a href="#" id="elderlyToggleRegister" class="text-green">Register Now</a></span>
-                </div>
-              </form>
-              <form id="elderlyRegisterForm" style="display: none;">
-                <h3 class="text-center mb-3">ACH Register</h3>
-                <div class="form-group">
-                  <label for="elderly-reg-email">Email</label>
-                  <input type="text" class="form-control" id="elderly-reg-email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="elderly-reg-password">Password</label>
-                  <input type="password" class="form-control" id="elderly-reg-password" placeholder="Enter password">
-                </div>
-                <button type="submit" class="btn btn-success btn-block">Register</button>
-                <div class="text-center mt-3">
-                  <span>Already registered? <a href="#" id="elderlyToggleLogin" class="text-green">Login Now</a></span>
-                </div>
-              </form>
-            </div>
-  
-          </div>
-        </div>
-      </div>
-  
-      <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog"
+<form id="register-form" onsubmit="event.preventDefault(); window.location.href='product-view.html';">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" style="width: 100%;" required > <br>
+            <label for="password">Password:</label> <br>
+            <input type="password" id="password" style="width: 100%;" required > <br>
+            <div style="text-align: left;"> <br>
+        <button type="submit">Register</button>
+    </div>
+</form>
+
+<div style="text-align: center;">
+    Already Registered?  <a href="loginACH.html">Login Now</a>
+</div>
+            
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog"
         aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -336,7 +261,41 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+      import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+      
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDNt0sZwE-anzM0XePRfTtKSSDd7sb5vxg",
+        authDomain: "authentication-e01e3.firebaseapp.com",
+        projectId: "authentication-e01e3",
+        storageBucket: "authentication-e01e3.appspot.com",
+        messagingSenderId: "1027205635402",
+        appId: "1:1027205635402:web:331c915d866dc7fb77b5b3"
+      };
+      
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
 
+      // Register user
+      document.getElementById('register-form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+          
+          createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                console.log('User registered:', user);
+            })
+            .catch((error) => {
+                console.error('Error registering user:', error);
+            });
+      });
+    </script>
 </body>
-
 </html>
