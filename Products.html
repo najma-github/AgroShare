@@ -239,57 +239,11 @@
                 <button type="submit" class="btn btn-success btn-block">Send</button>
               </form>
             </div>
-          </div>
         </div>
-      </div>
-  
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <script>
-        // Farmer Form Toggle
-        document.getElementById('farmerToggleRegister').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('farmerLoginForm').style.display = 'none';
-          document.getElementById('farmerRegisterForm').style.display = 'block';
-        });
-  
-        document.getElementById('farmerToggleLogin').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('farmerLoginForm').style.display = 'block';
-          document.getElementById('farmerRegisterForm').style.display = 'none';
-        });
-  
-        // <!-- // Elderly Care Home Form Toggle
-        document.getElementById('elderlyToggleRegister').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('elderlyLoginForm').style.display = 'none';
-          document.getElementById('elderlyRegisterForm').style.display = 'block';
-        });
-  
-        document.getElementById('elderlyToggleLogin').addEventListener('click', function (event) {
-          event.preventDefault();
-          document.getElementById('elderlyLoginForm').style.display = 'block';
-          document.getElementById('elderlyRegisterForm').style.display = 'none';
-        }); -->
-  
-        // User Type Toggle
-        document.getElementById('toggleFarmer').addEventListener('click', function () {
-          document.getElementById('farmerForm').style.display = 'block';
-          document.getElementById('elderlyForm').style.display = 'none';
-          document.getElementById('toggleFarmer').classList.add('active');
-          document.getElementById('toggleElderly').classList.remove('active');
-        });
-  
-        document.getElementById('toggleElderly').addEventListener('click', function () {
-          document.getElementById('farmerForm').style.display = 'none';
-          document.getElementById('elderlyForm').style.display = 'block';
-          document.getElementById('toggleFarmer').classList.remove('active');
-          document.getElementById('toggleElderly').classList.add('active');
-        });
-      </script>
-    </main>
+    </div>
+</div>
 
+  </main>
   <div class="mt-5"></div>
   <footer id="footer" class="footer dark-background">
 
