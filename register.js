@@ -36,8 +36,8 @@ document.getElementById('farmerRegisterForm').addEventListener('submit', functio
 // Handle Farmer Login
 document.getElementById('farmerLoginForm').addEventListener('submit', function(event) {
   event.preventDefault();
-  const email = document.getElementById('farmer-email').value;
-  const password = document.getElementById('farmer-password').value;
+  const email = document.getElementById('farmerEemail').value;
+  const password = document.getElementById('farmerpassword').value;
 
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
