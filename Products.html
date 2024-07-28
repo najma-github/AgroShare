@@ -16,7 +16,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Marcellus:wght@400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Marcellus:wght@400&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,11 +28,12 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login and Signup</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Updated Font Awesome -->
-    <link href="assets/css/main.css" rel="stylesheet"> <!-- Link to your custom CSS file -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Signup</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Updated Font Awesome -->
+  <link href="assets/css/main.css" rel="stylesheet"> <!-- Link to your custom CSS file -->
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -38,7 +41,8 @@
   <style>
     .icon {
       color: green;
-      font-size: 4.3em; /* Adjust this value to make the icon larger or smaller */
+      font-size: 4.3em;
+      /* Adjust this value to make the icon larger or smaller */
     }
 
     /* Style for full screen video background */
@@ -46,10 +50,12 @@
       position: fixed;
       right: 4;
       left: 1;
-      bottom: -10px; /* Adjust this value to compensate for the top shift */
-      top: -350px; /* Adjust this value to move the video down */
+      bottom: -10px;
+      /* Adjust this value to compensate for the top shift */
+      top: -350px;
+      /* Adjust this value to move the video down */
       min-width: 100%;
-      min-height: 100%; 
+      min-height: 100%;
       z-index: -1;
       object-fit: cover;
     }
@@ -67,22 +73,23 @@
 
     /* Styles for form container */
     .form-container {
-      background-color: rgba(144, 238, 144, 0.5); /* Light green with transparency */
+      background-color: rgba(144, 238, 144, 0.5);
+      /* Light green with transparency */
       border-radius: 15px;
       padding: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-
   </style>
 
-  <scritp type = "module" src="register.js" defer></scritp>
+  <scritp type="module" src="register.js" defer></scritp>
 
 </head>
 
 <body class="products-page">
   <!-- Video Background -->
   <video autoplay muted loop class="video-background">
-    <source src="C:\Users\Najma\Documents\ANC\Research Final\Project-Agro\assets\Video\8540468-hd_1920_1080_30fps.mp4" type="video/mp4">
+    <source src="C:\Users\Najma\Documents\ANC\Research Final\Project-Agro\assets\Video\8540468-hd_1920_1080_30fps.mp4"
+      type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
@@ -111,193 +118,201 @@
     </header>
   </div>
 
-  <main class="main"> 
+  <main class="main">
     <!-- SIGN IN/SIGN UP -->
-<body>
-    <div class="container">
+
+    <body>
+      <div class="container">
         <div class="row justify-content-center mt-5">
-            <div class="col-md-6 form-container">
-                
-                <div class="text-center mb-4">
-                    <div class="btn-group" role="group" aria-label="User Type Toggle">
-    <button type="button" class="btn btn-toggle active" id="toggleFarmer">
-        <i class="fas fa-seedling"></i> Farmer
-    </button>
-    <button type="button" class="btn btn-toggle" id="toggleElderly">
-        <i class="fas fa-utensils"></i> Aged Care Home
-    </button>
-</div>
+          <div class="col-md-6 form-container">
 
-                </div>
-                <!-- Farmer Form -->
-                <div id="farmerForm">
-                    
-                    <form id="farmerLoginForm">
-                    <h3 class="text-center mb-3">Farmer Login </h3>
-                        <div class="form-group">
-                            <label for="farmer-email">Username</label>
-                            <input type="email" class="form-control" id="farmer-email" placeholder="Enter Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="farmer-password">Password</label>
-                            <input type="password" class="form-control" id="farmer-password" placeholder="Enter password" required>
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="farmer-rememberMe">
-                            <label class="form-check-label" for="farmer-rememberMe">Remember Me</label>
-                            <span class="forgot-password">
-    <a href="#" class="text-green" data-toggle="modal" data-target="#forgotPasswordModal">Forgot password?</a>
-</span>
-                        </div>
-                        <button type="submit" class="btn btn-success btn-block">Sign In</button>
-                        <div class="text-center mt-3">
-                            <span>Not registered yet? <a href="#" id="farmerToggleRegister" class="text-green">Register Now</a></span>
-                        </div>
-                    </form>
-                    
-                    <!-- Farmer Register Form -->
-                    <div class="text-center mt-3">
-                          <form id="farmerRegisterForm" style="display: none;">
-                            <h3 class="text-center mb-3">Farmer Register</h3>
-                          
-                            <label for="farmerRegEmail">Email</label>
-                            <input type="email" placeholder="Enter Email" id="farmerRegEmail" required>
-                          
-                            <label for="farmerRregPassword">Password</label>
-                            <input type="password" placeholder="Enter password" id="farmerRegPassword" required>
-                          
-                            <button id="submit" type="submit">Register</button>
-                            <span>Already registered? <a href="#" id="farmerToggleLogin" class="text-green">Login Now</a></span>
-                        </div>
-                    </form>
-                </div>
-                <!-- Elderly Care Home Form -->
-                <div id="elderlyForm" style="display: none;">
-                    
-                    <form id="elderlyLoginForm">
-                    <h3 class="text-center mb-3">ACH Login </h3>
-                        <div class="form-group">
-                            <label for="elderly-username">Username</label>
-                            <input type="text" class="form-control" id="elderly-username" placeholder="Enter username">
-                        </div>
-                        <div class="form-group">
-                            <label for="elderly-password">Password</label>
-                            <input type="password" class="form-control" id="elderly-password" placeholder="Enter password">
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="elderly-rememberMe">
-                            <label class="form-check-label" for="elderly-rememberMe">Remember Me</label>
-                            <span class="forgot-password">
-    <a href="#" class="text-green" data-toggle="modal" data-target="#forgotPasswordModal">Forgot password?</a>
-</span>
-                        </div>
-                        <button type="submit" class="btn btn-success btn-block">Sign In</button>
-                        <div class="text-center mt-3">
-                            <span>Not registered yet? <a href="#" id="elderlyToggleRegister" class="text-green">Register Now</a></span>
-                        </div>
-                    </form>
-                    <form id="elderlyRegisterForm" style="display: none;">
-                    <h3 class="text-center mb-3">ACH Register </h3>
-                        <div class="form-group">
-                            <label for="elderly-reg-username">Username</label>
-                            <input type="text" class="form-control" id="elderly-reg-username" placeholder="Enter username">
-                        </div>
-                        <div class="form-group">
-                            <label for="elderly-reg-password">Password</label>
-                            <input type="password" class="form-control" id="elderly-reg-password" placeholder="Enter password">
-                        </div>
-                        <button type="submit" class="btn btn-success btn-block">Register</button>
-                        <div class="text-center mt-3">
-                            <span>Already registered? <a href="#" id="elderlyToggleLogin" class="text-green">Login Now</a></span>
-                        </div>
-                    </form>
-                </div>
+            <div class="text-center mb-4">
+              <div class="btn-group" role="group" aria-label="User Type Toggle">
+                <button type="button" class="btn btn-toggle active" id="toggleFarmer">
+                  <i class="fas fa-seedling"></i> Farmer
+                </button>
+                <button type="button" class="btn btn-toggle" id="toggleElderly">
+                  <i class="fas fa-utensils"></i> Aged Care Home
+                </button>
+              </div>
+
             </div>
-        </div>
-    </div>
+            <!-- Farmer Form -->
+            <div id="farmerForm">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
+              <form id="farmerLoginForm">
+                <h3 class="text-center mb-3">Farmer Login </h3>
+                <div class="form-group">
+                  <label for="farmer-email">Username</label>
+                  <input type="email" class="form-control" id="farmer-email" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group">
+                  <label for="farmer-password">Password</label>
+                  <input type="password" class="form-control" id="farmer-password" placeholder="Enter password"
+                    required>
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="farmer-rememberMe">
+                  <label class="form-check-label" for="farmer-rememberMe">Remember Me</label>
+                  <span class="forgot-password">
+                    <a href="#" class="text-green" data-toggle="modal" data-target="#forgotPasswordModal">Forgot
+                      password?</a>
+                  </span>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Sign In</button>
+                <div class="text-center mt-3">
+                  <span>Not registered yet? <a href="#" id="farmerToggleRegister" class="text-green">Register
+                      Now</a></span>
+                </div>
+              </form>
+
+              <!-- Farmer Register Form -->
+              <div class="text-center mt-3">
+                <form id="farmerRegisterForm" style="display: none;">
+                  <h3 class="text-center mb-3">Farmer Register</h3>
+
+                  <label for="farmerRegEmail">Email</label>
+                  <input type="email" placeholder="Enter Email" id="farmerRegEmail" required>
+
+                  <label for="farmerRregPassword">Password</label>
+                  <input type="password" placeholder="Enter password" id="farmerRegPassword" required>
+
+                  <button id="submit" type="submit">Register</button>
+                  <span>Already registered? <a href="#" id="farmerToggleLogin" class="text-green">Login Now</a></span>
+              </div>
+              </form>
+            </div>
+            <!-- Elderly Care Home Form -->
+            <div id="elderlyForm" style="display: none;">
+
+              <form id="elderlyLoginForm">
+                <h3 class="text-center mb-3">ACH Login </h3>
+                <div class="form-group">
+                  <label for="elderly-username">Username</label>
+                  <input type="text" class="form-control" id="elderly-username" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                  <label for="elderly-password">Password</label>
+                  <input type="password" class="form-control" id="elderly-password" placeholder="Enter password">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="elderly-rememberMe">
+                  <label class="form-check-label" for="elderly-rememberMe">Remember Me</label>
+                  <span class="forgot-password">
+                    <a href="#" class="text-green" data-toggle="modal" data-target="#forgotPasswordModal">Forgot
+                      password?</a>
+                  </span>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Sign In</button>
+                <div class="text-center mt-3">
+                  <span>Not registered yet? <a href="#" id="elderlyToggleRegister" class="text-green">Register
+                      Now</a></span>
+                </div>
+              </form>
+              <form id="elderlyRegisterForm" style="display: none;">
+                <h3 class="text-center mb-3">ACH Register </h3>
+                <div class="form-group">
+                  <label for="elderly-reg-username">Username</label>
+                  <input type="text" class="form-control" id="elderly-reg-username" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                  <label for="elderly-reg-password">Password</label>
+                  <input type="password" class="form-control" id="elderly-reg-password" placeholder="Enter password">
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Register</button>
+                <div class="text-center mt-3">
+                  <span>Already registered? <a href="#" id="elderlyToggleLogin" class="text-green">Login Now</a></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script>
         // Farmer Form Toggle
-        document.getElementById('farmerToggleRegister').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('farmerLoginForm').style.display = 'none';
-            document.getElementById('farmerRegisterForm').style.display = 'block';
+        document.getElementById('farmerToggleRegister').addEventListener('click', function (event) {
+          event.preventDefault();
+          document.getElementById('farmerLoginForm').style.display = 'none';
+          document.getElementById('farmerRegisterForm').style.display = 'block';
         });
 
-        document.getElementById('farmerToggleLogin').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('farmerLoginForm').style.display = 'block';
-            document.getElementById('farmerRegisterForm').style.display = 'none';
+        document.getElementById('farmerToggleLogin').addEventListener('click', function (event) {
+          event.preventDefault();
+          document.getElementById('farmerLoginForm').style.display = 'block';
+          document.getElementById('farmerRegisterForm').style.display = 'none';
         });
 
         // Elderly Care Home Form Toggle
-        document.getElementById('elderlyToggleRegister').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('elderlyLoginForm').style.display = 'none';
-            document.getElementById('elderlyRegisterForm').style.display = 'block';
+        document.getElementById('elderlyToggleRegister').addEventListener('click', function (event) {
+          event.preventDefault();
+          document.getElementById('elderlyLoginForm').style.display = 'none';
+          document.getElementById('elderlyRegisterForm').style.display = 'block';
         });
 
-        document.getElementById('elderlyToggleLogin').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('elderlyLoginForm').style.display = 'block';
-            document.getElementById('elderlyRegisterForm').style.display = 'none';
+        document.getElementById('elderlyToggleLogin').addEventListener('click', function (event) {
+          event.preventDefault();
+          document.getElementById('elderlyLoginForm').style.display = 'block';
+          document.getElementById('elderlyRegisterForm').style.display = 'none';
         });
 
         // User Type Toggle
-        document.getElementById('toggleFarmer').addEventListener('click', function() {
-            document.getElementById('farmerForm').style.display = 'block';
-            document.getElementById('elderlyForm').style.display = 'none';
-            document.getElementById('toggleFarmer').classList.add('active');
-            document.getElementById('toggleElderly').classList.remove('active');
+        document.getElementById('toggleFarmer').addEventListener('click', function () {
+          document.getElementById('farmerForm').style.display = 'block';
+          document.getElementById('elderlyForm').style.display = 'none';
+          document.getElementById('toggleFarmer').classList.add('active');
+          document.getElementById('toggleElderly').classList.remove('active');
         });
 
-        document.getElementById('toggleElderly').addEventListener('click', function() {
-            document.getElementById('farmerForm').style.display = 'none';
-            document.getElementById('elderlyForm').style.display = 'block';
-            document.getElementById('toggleFarmer').classList.remove('active');
-            document.getElementById('toggleElderly').classList.add('active');
+        document.getElementById('toggleElderly').addEventListener('click', function () {
+          document.getElementById('farmerForm').style.display = 'none';
+          document.getElementById('elderlyForm').style.display = 'block';
+          document.getElementById('toggleFarmer').classList.remove('active');
+          document.getElementById('toggleElderly').classList.add('active');
         });
-    </script>
-<!-- Add this modal at the end of your body section -->
-<div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+      </script>
+      <!-- Add this modal at the end of your body section -->
+      <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog"
+        aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="forgotPasswordModalLabel">Request a Password Reset</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+              <h5 class="modal-title" id="forgotPasswordModalLabel">Request a Password Reset</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
             <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="reset-email">Email:</label>
-                        <input type="email" class="form-control" id="reset-email" placeholder="Enter your email">
-                    </div>
-                    <button type="submit" class="btn btn-success btn-block">Send</button>
-                </form>
+              <form>
+                <div class="form-group">
+                  <label for="reset-email">Email:</label>
+                  <input type="email" class="form-control" id="reset-email" placeholder="Enter your email">
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Send</button>
+              </form>
             </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
   </main>
   <div class="mt-5"></div>
   <footer id="footer" class="footer dark-background">
 
-    
+
     <div class="copyright text-center">
-      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+      <div
+        class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div>
             © Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved
           </div>
           <div class="credits">
-            
+
             Designed by <a href="https://bootstrapmade.com/">Najma Dhasthakeer</a>
           </div>
         </div>
@@ -315,7 +330,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
