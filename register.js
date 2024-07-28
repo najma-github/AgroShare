@@ -7,37 +7,38 @@ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDNt0sZwE-anzM0XePRfTtKSSDd7sb5vxg",
-  authDomain: "authentication-e01e3.firebaseapp.com",
-  projectId: "authentication-e01e3",
-  storageBucket: "authentication-e01e3.appspot.com",
-  messagingSenderId: "1027205635402",
-  appId: "1:1027205635402:web:331c915d866dc7fb77b5b3"
+    apiKey: "AIzaSyDNt0sZwE-anzM0XePRfTtKSSDd7sb5vxg",
+    authDomain: "authentication-e01e3.firebaseapp.com",
+    projectId: "authentication-e01e3",
+    storageBucket: "authentication-e01e3.appspot.com",
+    messagingSenderId: "1027205635402",
+    appId: "1:1027205635402:web:331c915d866dc7fb77b5b3"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-//Input
-const email = document.getElementById('farmerRegEmail').value;
-const password = document.getElementById('farmerRegPassword').value;
-
 //submit button
 const submit = document.getElementById('submit');
-submit.addEventListener("click",function(event){
+submit.addEventListener("click", function (event) {
     event.preventDefault()
+
+    //Input
+    const email = document.getElementById('farmerRegEmail').value;
+    const password = document.getElementById('farmerRegPassword').value;
+
     createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed up 
-    const user = userCredential.user;
-    alert("Creating Account")
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    alert(errorMessage)
-    // ..
-  });
+        .then((userCredential) => {
+            // Signed up 
+            const user = userCredential.user;
+            alert("Creating Account")
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage)
+            // ..
+        });
 
 })
