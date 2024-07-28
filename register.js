@@ -49,37 +49,37 @@ document.getElementById('farmerLoginForm').addEventListener('submit', function(e
     });
 });
 
-// Handle Elderly Care Home Registration
-document.getElementById('elderlyRegisterForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-  const email = document.getElementById('elderly-reg-email').value;
-  const password = document.getElementById('elderly-reg-password').value;
+// // Handle Elderly Care Home Registration
+// document.getElementById('elderlyRegisterForm').addEventListener('submit', function(event) {
+//   event.preventDefault();
+//   const email = document.getElementById('elderly-reg-email').value;
+//   const password = document.getElementById('elderly-reg-password').value;
 
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      alert('Elderly Care Home Registered Successfully!');
-      document.getElementById('elderlyRegisterForm').reset();
-    })
-    .catch((error) => {
-      alert('Error: ' + error.message);
-    });
-});
+//   firebase.auth().createUserWithEmailAndPassword(email, password)
+//     .then((userCredential) => {
+//       alert('Elderly Care Home Registered Successfully!');
+//       document.getElementById('elderlyRegisterForm').reset();
+//     })
+//     .catch((error) => {
+//       alert('Error: ' + error.message);
+//     });
+// });
 
-// Handle Elderly Care Home Login
-document.getElementById('elderlyLoginForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-  const email = document.getElementById('elderly-email').value;
-  const password = document.getElementById('elderly-password').value;
+// // Handle Elderly Care Home Login
+// document.getElementById('elderlyLoginForm').addEventListener('submit', function(event) {
+//   event.preventDefault();
+//   const email = document.getElementById('elderly-email').value;
+//   const password = document.getElementById('elderly-password').value;
 
-  firebase.auth().signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      alert('Elderly Care Home Logged In Successfully!');
-      document.getElementById('elderlyLoginForm').reset();
-    })
-    .catch((error) => {
-      alert('Error: ' + error.message);
-    });
-});
+//   firebase.auth().signInWithEmailAndPassword(email, password)
+//     .then((userCredential) => {
+//       alert('Elderly Care Home Logged In Successfully!');
+//       document.getElementById('elderlyLoginForm').reset();
+//     })
+//     .catch((error) => {
+//       alert('Error: ' + error.message);
+//     });
+// });
 
 // Handle Password Reset
 document.getElementById('forgotPasswordModal').addEventListener('submit', function(event) {
