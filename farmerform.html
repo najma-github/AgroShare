@@ -35,243 +35,266 @@
   <!-- Updated Font Awesome -->
   <link href="assets/css/main.css" rel="stylesheet"> <!-- Link to your custom CSS file -->
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">  
-
-  <style>
-    .icon {
-      color: green;
-      font-size: 4.3em;
-      /* Adjust this value to make the icon larger or smaller */
-    }
-
-    /* Style for full screen video background */
-.video-background {
-      position: fixed;
-      right: 4;
-      left: 1;
-      bottom: -10px;
-      /* Adjust this value to compensate for the top shift */
-      top: -350px;
-      /* Adjust this value to move the video down */
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
-      object-fit: cover;
-    }
-
-    /* Optional: To ensure the content is above the video */
-    .content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .header {
-      position: relative;
-      z-index: 4;
-    }
-
-    /* Styles for form container */
-    .form-container {
-      background-color: rgba(144, 238, 144, 0.5);
-      /* Light green with transparency */
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-  </style>
-
-  <scritp type="module" src="register.js" defer></scritp>
-
-</head>
-
-<body class="products-page">
-  <!-- Video Background -->
-  <video autoplay muted loop class="video-background">
-    <source src="C:\Users\Najma\Documents\ANC\Research Final\Project-Agro\assets\Video\8540468-hd_1920_1080_30fps.mp4"
-      type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <!-- Content goes here -->
-  <div class="content">
-    <header id="header" class="header d-flex align-items-center position-relative">
-      <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-        <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="assets/img/logo.png" alt="AgriCulture">
-          <!-- <h1 class="sitename">AgriCulture</h1>  -->
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html"><i class="fas fa-home icon"></i></a></li>
-            <!-- <li><a href="Products.html" active>Products</a></li>
-            <li><a href="blog.html">Blog</a></li>-->
-            <li><a href="contact.html"><i class="fas fa-address-book icon"></i> </a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-      </div>
-    </header>
-				
-					
-<main id="main" class="main">
-
-  <!--<div class="card" style="width: 50%;">-->
-    <div class="container" style="width: 100%;">
-        <div class="row justify-content-center mt-5">
-          <div class="col-md-8 form-container">
-      <form id="censusForm">
-        <div data-mdb-input-init class="form-outline mb-4">
-          <label class="form-label" for="form3Example3"  style="font-weight: bold;">Farm Name</label>
-          <input id="farmName" placeholder="Name of The Farm" class="form-control mb-2" required>
+  <head>
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+  
+    <style>
+      .icon {
+        color: green;
+        font-size: 4.3em;
+      }
+  
+      .form-container {
+        background-color: rgba(144, 238, 144, 0.5);
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+  
+      .btn-close-custom {
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        background-color: #99ff8c;
+        border: none;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      }
+  
+      .btn-close-custom::before {
+        content: '×';
+        font-size: 20px;
+        color: #333;
+        line-height: 1;
+      }
+  
+      .modal-content {
+        position: relative;
+      }
+  
+      .modal-body {
+        padding: 20px;
+      }
+  
+      .video-background {
+        position: fixed;
+        right: 4;
+        left: 1;
+        bottom: -10px;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        object-fit: cover;
+      }
+  
+      .content {
+        position: relative;
+        z-index: 1;
+      }
+  
+      .header {
+        position: relative;
+        z-index: 4;
+      }
+    </style>
+  
+    <script type="module" src="register.js" defer></script>
+  </head>
+  
+  <body class="products-page">
+    <!-- Video Background -->
+    <video autoplay muted loop class="video-background">
+      <source src="C:\Users\Najma\Documents\ANC\Research Final\Project-Agro\assets\Video\8540468-hd_1920_1080_30fps.mp4"
+        type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+    <!-- Content goes here -->
+    <div class="content">
+      <header id="header" class="header d-flex align-items-center position-relative">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="AgriCulture">
+          </a>
+  
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="index.html"><i class="fas fa-home icon"></i></a></li>
+              <li><a href="contact.html"><i class="fas fa-address-book icon"></i></a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
         </div>
-
-        <div data-mdb-input-init class="form-outline mb-4">
-          <label class="form-label" for="form3Example3"  style="font-weight: bold;">Farm Province</label>
-          <input type="text" class="form-control" placeholder="Enter the Province of The Farm" id="farmProvince" required>
-        </div>
-
-        <div data-mdb-input-init class="form-outline mb-4">
-  <label class="form-label" for="productType"  style="font-weight: bold;">Product Type</label>
-  <select class="form-control" id="productType" required>
-    <option value="" disabled selected>Select Product Type</option>
-    <option value="fruits">Fruits</option>
-    <option value="vegetables">Vegetables</option>
-    <option value="dairy">Dairy Products</option>
-    <option value="mixed">Mixed</option>
-  </select>
-</div>
-
-
-        <div data-mdb-input-init class="form-outline mb-4">
-          <label class="form-label" for="form3Example3"  style="font-weight: bold;">Product Name</label>
-          <input class="form-control" placeholder="Enter the Name of Your Surprise Bag" id="productName" required>
-        </div>
-
-        <div data-mdb-input-init class="form-outline mb-4">
-          <label class="form-label" for="form3Example3"  style="font-weight: bold;">Upload The Product Image</label>
-          <input type="file" class="form-control" id="productImage" accept="image/*" required>
-        </div>
-
-        <!-- Submit Button -->
-<!-- Reserve Button Start -->
-      <div class="row justify-content-center mt-4">
-          <div class="col-md-3 text-center">
-            <button type="button" data-bs-toggle="modal" data-bs-target="#thankYouModal" class="btn btn-success" id="Fsubmit">Submit</button>
-          </div>
-      </div>
-      <!-- Reserve Button End -->
-
-      </form>
-    </div>
-  </div>
-
-<!-- end of the form  -->
-</main>
-
-  <div class="mt-3"></div>
-  <footer id="footer" class="footer dark-background">
-
-
-    <div class="copyright text-center">
-      <div
-        class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
-
-        <div class="d-flex flex-column align-items-center align-items-lg-start">
-          <div>
-            © Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-
-            Designed by <a href="https://bootstrapmade.com/">Najma Dhasthakeer</a>
+      </header>
+  
+      <main id="main" class="main">
+        <div class="container" style="width: 100%;">
+          <div class="row justify-content-center mt-5">
+            <div class="col-md-8 form-container">
+              <form id="censusForm" onsubmit="handleSubmit(event)" novalidate>
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="farmName" style="font-weight: bold;">Farm Name</label>
+                  <input id="farmName" name="farmName" placeholder="Name of The Farm" class="form-control mb-2" required>
+                  <div class="invalid-feedback">Please enter the name of the farm.</div>
+                </div>
+  
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="farmProvince" style="font-weight: bold;">Farm Province</label>
+                  <input type="text" name="farmProvince" class="form-control" placeholder="Enter the Province of The Farm"
+                    id="farmProvince" required>
+                  <div class="invalid-feedback">Please enter the province of the farm.</div>
+                </div>
+  
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="productType" style="font-weight: bold;">Product Type</label>
+                  <select class="form-control" name="productType" id="productType" required>
+                    <option value="" disabled selected>Select Product Type</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="dairy">Dairy Products</option>
+                    <option value="mixed">Mixed</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a product type.</div>
+                </div>
+  
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="productName" style="font-weight: bold;">Product Name</label>
+                  <input name="productName" class="form-control" placeholder="Enter the Name of Your Surprise Bag"
+                    id="productName" required>
+                  <div class="invalid-feedback">Please enter the name of your surprise bag.</div>
+                </div>
+  
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="productImage" style="font-weight: bold;">Upload The Product Image</label>
+                  <input type="file" name="productImage" class="form-control" id="productImage" accept="image/*" required>
+                  <div class="invalid-feedback">Please upload the product image.</div>
+                </div>
+  
+                <div class="row justify-content-center mt-4">
+                  <div class="col-md-3 text-center">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-
-        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
+      </main>
+  
+      <footer id="footer" class="footer dark-background">
+        <div class="copyright text-center">
+          <div
+            class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+            <div class="d-flex flex-column align-items-center align-items-lg-start">
+              <div>© Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved</div>
+              <div class="credits">Designed by <a href="https://bootstrapmade.com/">Najma Dhasthakeer</a></div>
+            </div>
+  
+            <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
         </div>
-
+      </footer>
+  
+      <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+          class="bi bi-arrow-up-short"></i></a>
+      <div id="preloader"></div>
+  
+      <!-- Thank You Modal -->
+      <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center mx-auto" id="thankYouModalLabel">Submission Successful</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Your form has been successfully submitted!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+  
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
 
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDNt0sZwE-anzM0XePRfTtKSSDd7sb5vxg",
+          authDomain: "authentication-e01e3.firebaseapp.com",
+          projectId: "authentication-e01e3",
+          storageBucket: "authentication-e01e3.appspot.com",
+          messagingSenderId: "1027205635402",
+          appId: "1:1027205635402:web:331c915d866dc7fb77b5b3"
+        };
 
-  </footer>
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+        import { getDatabase, ref, child, get, set, update, remove } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+        const db = getDatabase();
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        let farmName = document.getElementById('farmName');
+        let farmProvince = document.getElementById('farmProvince');
+        let productType = document.getElementById('productType');
+        let productName = document.getElementById('productName');
+        // let productImage = document.getElementById('productImage');
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+        let Fsubmit = document.getElementById('Fsubmit');
 
-</main>
+        function AddData() {
+          set(ref(db, 'FarmDetails/' + CnicInp.value), {
+            farmname: farmName.value,
+            farmprovince: farmProvince.value,
+            producttype: productType.value,
+            productName: productName.value,
+            )
+        }
 
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+        Fsubmit.addEventListener('click', AddData);
+      </script>
+  
+      // <!-- JavaScript to Handle Form Submission -->
+      <script>
+        function handleSubmit(event) {
+          event.preventDefault();
+          const form = event.target;
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDNt0sZwE-anzM0XePRfTtKSSDd7sb5vxg",
-    authDomain: "authentication-e01e3.firebaseapp.com",
-    projectId: "authentication-e01e3",
-    storageBucket: "authentication-e01e3.appspot.com",
-    messagingSenderId: "1027205635402",
-    appId: "1:1027205635402:web:331c915d866dc7fb77b5b3"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-
-  import {getDatabase, ref, child, get, set, update, remove} from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
-
-  const db = getDatabase();
-
-  let farmName = document.getElementById('farmName');
-  let farmProvince = document.getElementById('farmProvince');
-  let productType = document.getElementById('productType');
-  let productName = document.getElementById('productName');
-  // let productImage = document.getElementById('productImage');
-
-  let Fsubmit = document.getElementById('Fsubmit');
-
-  function AddData() {
-    set(ref(db, 'FarmDetails/' + CnicInp.value), {
-      farmname: farmName.value,
-      farmprovince: farmProvince.value,
-      producttype: productType.value,
-      productName: productName.value,
-    )}
-
-  Fsubmit.addEventListener('click', AddData);
-
-
-
-
-
-
-
-</script>
-
-</body>
-
-</html>
+          if (form.checkValidity()) {
+            const modalInstance = new bootstrap.Modal(document.getElementById('thankYouModal'));
+            modalInstance.show();
+            form.reset();
+          } else {
+            form.classList.add('was-validated');
+          }
+        }
+      </script>
+  
+  </body>
+  
+  </html>
