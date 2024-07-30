@@ -318,7 +318,7 @@
     
         // Add data to Firebase
         function AddData() {
-            set(ref(db, 'FarmDetails/' + farmName.value), {
+            set(ref(db, 'FarmDetails/'), {
                 farmname: farmName.value,
                 farmprovince: farmProvince.value,
                 producttype: productType.value,
@@ -363,7 +363,7 @@
     //         form.classList.add('was-validated'); // Add validation class if form is invalid
     //     }
     // });
-    
+
     </script>
 
 
