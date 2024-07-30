@@ -2440,20 +2440,24 @@ body {
 }
 
 /* Button for navigation menu */
+/* Custom styling for the button FILTER*/
 .buttonnavi {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff; /* Blue background */
-    border: none;
-    border-radius: 0.25rem;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  background-color: #155724; /* Dark green background */
+  color: #fff; /* White text color */
+  font-weight: 500; /* Medium font weight */
+  border-radius: 9999px; /* Rounded corners */
+  font-size: 0.875rem; /* Small text size */
+  padding: 0.5em 1em; /* Padding inside the button */
+  text-align: center; /* Center text inside the button */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition for background color */
+  border: none; /* Remove default border */
 }
 
 .buttonnavi:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+  background-color: #004d00; /* Slightly darker green on hover */
+}
+
+.buttonnavi:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 4px rgba(29, 155, 37, 0.4); /* Green focus ring */
 }
