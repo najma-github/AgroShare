@@ -513,37 +513,49 @@
             function filterProducts() {
                 const province = document.getElementById('province').value;
                 const type = document.getElementById('type').value;
-                const productItems = document.querySelectorAll('.product-item');
-                const noProductsMessage = document.getElementById('no-products');
+                const products = document.querySelectorAll('.product-item');
+                let hasVisibleProducts = false;
 
-                let visibleProducts = 0;
+                // Define the specific cases where "No Result Found" should be displayed
+                const noResultCases = [
+                    { type: 'Fruit', province: 'northern-western' },
+                    { type: 'Vegetables', province: 'northern-central' },
+                    { type: 'Dairy', province: 'northern' },
+                    { type: 'Mixed', province: 'northern-central' }
+                ];
 
-                productItems.forEach(item => {
-                    const itemProvince = item.getAttribute('data-province');
-                    const itemType = item.getAttribute('data-type');
+                // Check if the current selection matches any of the specific cases
+                const noResultCase = noResultCases.find(caseItem => caseItem.type === type && caseItem.province === province);
 
-                    if ((province === itemProvince || province === '') && (type === itemType || type === '')) {
-                        item.style.display = 'block';
-                        visibleProducts++;
+                if (noResultCase) {
+                    // Hide all products
+                    products.forEach(product => product.style.display = 'none');
+                    // Display "No Result Found"
+                    document.getElementById('no-products').style.display = 'block';
+                    return; // Exit function early
+                }
+
+                // If not a special case, proceed with normal filtering
+                products.forEach(product => {
+                    const productProvince = product.getAttribute('data-province');
+                    const productType = product.getAttribute('data-type');
+
+                    if ((province === '' || productProvince === province) &&
+                        (type === '' || productType === type)) {
+                        product.style.display = 'block';
+                        hasVisibleProducts = true;
                     } else {
-                        item.style.display = 'none';
+                        product.style.display = 'none';
                     }
                 });
 
-                // Show "No Products" message for specific combinations
-                if (visibleProducts === 0 &&
-                    ((province === 'northern-central' && type === 'vegetables') ||
-                        (province === 'northern' && type === 'dairy') ||
-                        (province === 'northern-central' && type === 'mixed'))) {
-                    noProductsMessage.style.display = 'block';
-                } else {
-                    noProductsMessage.style.display = 'none';
-                }
+                // Display "No Result Found" if no products are visible
+                document.getElementById('no-products').style.display = hasVisibleProducts ? 'none' : 'block';
             }
 
-            // Call filterProducts when the page loads to set initial state
-            document.addEventListener('DOMContentLoaded', filterProducts);
         </script>
+
+        
 
 </body>
 
