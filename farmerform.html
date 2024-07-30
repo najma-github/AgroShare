@@ -319,6 +319,7 @@
         let farmProvince = document.getElementById('farmProvince');
         let productType = document.getElementById('productType');
         let productName = document.getElementById('productName');
+        let productID = document.getElementById('productID');
         let productImage = document.getElementById('productImage');
         let form = document.getElementById('censusForm');
         let Fsubmit = document.getElementById('Fsubmit');
@@ -329,7 +330,8 @@
                 farmname: farmName.value,
                 farmprovince: farmProvince.value,
                 producttype: productType.value,
-                productName: productName.value
+                productName: productName.value,
+                productID: productID
             })
             .then(() => {
                 // Show success modal
