@@ -2449,6 +2449,7 @@ body {
   font-size: 0.875rem; /* Small text size */
   padding: 0.5em 1em; /* Padding inside the button */
   text-align: center; /* Center text inside the button */
+  text-decoration-color: #2ea359;
   transition: background-color 0.2s ease-in-out; /* Smooth transition for background color */
   border: none; /* Remove default border */
 }
