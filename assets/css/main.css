@@ -2445,7 +2445,7 @@ body {
   background-color: #84ffa1; /* Dark green background */
   color: #115303; /* White text color */
   font-weight: 200; /* Medium font weight */
-  border-radius: 9999px; /* Rounded corners */
+  border-radius: 100px; /* Rounded corners */
   font-size: 0.875rem; /* Small text size */
   padding: 0.5em 1em; /* Padding inside the button */
   text-align: center; /* Center text inside the button */
