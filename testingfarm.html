@@ -250,6 +250,73 @@
                     modalInstance.hide();
                 }
             };
+
+            // The update
+              // Create file content as text
+  const text = `Thank You!\nYou Just Saved a Meal\n\nYour Reservation Number: ${reservationNumber}`;
+    
+    // Create a canvas element
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    
+    // Set canvas size
+    canvas.width = 1080;
+    canvas.height = 1080;
+
+    // Fill canvas background with white color
+    context.fillStyle = 'white';
+    
+    // Set font properties
+    context.font = '10px Arial';
+    context.fillStyle = 'dark';
+    context.textAlign = 'center';
+    
+    // Draw text on canvas
+    context.fillText(text, canvas.width / 2, canvas.height / 2);
+    
+    // Convert canvas to PNG
+    const imageUrl = canvas.toDataURL('image/png');
+    
+    // Create a Blob from the image URL
+    const blob = dataURLtoBlob(imageUrl);
+    const url = URL.createObjectURL(blob);
+    
+    // Update download link
+    const downloadLink = document.getElementById('downloadLink');
+    downloadLink.href = url;
+    downloadLink.download = 'reservation.png'; // Name of the downloaded file
+  }
+
+  // Helper function to convert dataURL to Blob
+  function dataURLtoBlob(dataURL) {
+    const [header, data] = dataURL.split(',');
+    const mimeString = header.split(':')[1].split(';')[0];
+    const byteString = atob(data);
+    const arrayBuffer = new ArrayBuffer(byteString.length);
+    const uint8Array = new Uint8Array(arrayBuffer);
+    for (let i = 0; i < byteString.length; i++) {
+      uint8Array[i] = byteString.charCodeAt(i);
+    }
+    return new Blob([arrayBuffer], { type: mimeString });
+  }
+  
+  // Add event listener to update reservation number when the modal is about to be shown
+  document.getElementById('thankYouModal').addEventListener('show.bs.modal', updateReservationNumber);
+
+  // Handle form submission
+  document.getElementById('reservationForm').addEventListener('submit', function(event) {
+    // Prevent form from submitting if validation fails
+    if (!this.checkValidity()) {
+      event.preventDefault(); // Prevent the form from submitting
+      event.stopPropagation(); // Stop further event propagation
+    } else {
+      // If the form is valid, show the modal
+      var modalInstance = new bootstrap.Modal(document.getElementById('thankYouModal'));
+      modalInstance.show();
+    }
+
+    this.classList.add('was-validated'); // Add validation feedback
+  }, false);
         </script>
     </div>
 </body>
