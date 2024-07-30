@@ -41,7 +41,7 @@
   <!-- Include Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
+    <style>
         .icon {
             color: green;
             font-size: 4.3em;
@@ -241,6 +241,15 @@
                     form.classList.add('was-validated');
                 }
             }
+
+            // Close the modal when clicking outside of it
+            window.onclick = function(event) {
+                const modal = document.getElementById('thankYouModal');
+                if (event.target === modal) {
+                    const modalInstance = bootstrap.Modal.getInstance(modal);
+                    modalInstance.hide();
+                }
+            };
         </script>
     </div>
 </body>
