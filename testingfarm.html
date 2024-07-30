@@ -206,122 +206,42 @@
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
         <div id="preloader"></div>
 
-        <!-- Preloader -->
-  <!-- <div id="preloader"></div> -->
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/js/main.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <!-- Modal Structure -->
+        <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
+                        <div class="modal-body">Thank you for your submission!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-        
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- JavaScript to Handle Form Submission -->
+        <script>
+    function handleSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-
-    <!-- Modal Structure -->
-    <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-body text-center">
-                  <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
-                  <p>You Just Saved a Meal</p>
-                  <p>Your Reservation Number: <span id="reservationNumber"></span></p>
-                  <a id="downloadLink" href="#" download="reservation.png" class="btn btn-primary mt-3">Download</a>
-                  <button type="button" class="btn btn-close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-          </div>
-      </div>
-
-<!-- JavaScript to Generate Reservation Number, Handle Form Submission, and Download File -->
-<script>
-  // Function to generate a random 11-digit number
-  function generateReservationNumber() {
-    return Math.floor(10000000000 + Math.random() * 90000000000);
-  }
-
-  // Function to update the reservation number and prepare the PNG image for download
-  function updateReservationNumber() {
-    const reservationNumber = generateReservationNumber();
-    document.getElementById('reservationNumber').textContent = reservationNumber;
-
-  // Create file content as text
-  const text = `Thank You!\nYou Just Saved a Meal\n\nYour Reservation Number: ${reservationNumber}`;
-    
-    // Create a canvas element
-    const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d');
-    
-    // Set canvas size
-    canvas.width = 1080;
-    canvas.height = 1080;
-
-    // Fill canvas background with white color
-    context.fillStyle = 'white';
-    
-    // Set font properties
-    context.font = '10px Arial';
-    context.fillStyle = 'dark';
-    context.textAlign = 'center';
-    
-    // Draw text on canvas
-    context.fillText(text, canvas.width / 2, canvas.height / 2);
-    
-    // Convert canvas to PNG
-    const imageUrl = canvas.toDataURL('image/png');
-    
-    // Create a Blob from the image URL
-    const blob = dataURLtoBlob(imageUrl);
-    const url = URL.createObjectURL(blob);
-    
-    // Update download link
-    const downloadLink = document.getElementById('downloadLink');
-    downloadLink.href = url;
-    downloadLink.download = 'reservation.png'; // Name of the downloaded file
-  }
-
-  // Helper function to convert dataURL to Blob
-  function dataURLtoBlob(dataURL) {
-    const [header, data] = dataURL.split(',');
-    const mimeString = header.split(':')[1].split(';')[0];
-    const byteString = atob(data);
-    const arrayBuffer = new ArrayBuffer(byteString.length);
-    const uint8Array = new Uint8Array(arrayBuffer);
-    for (let i = 0; i < byteString.length; i++) {
-      uint8Array[i] = byteString.charCodeAt(i);
+        if (form.checkValidity()) {
+            const modalInstance = new bootstrap.Modal(document.getElementById('thankYouModal'));
+            modalInstance.show();
+            form.reset();
+        } else {
+            form.classList.add('was-validated');
+        }
     }
-    return new Blob([arrayBuffer], { type: mimeString });
-  }
-  
-  // Add event listener to update reservation number when the modal is about to be shown
-  document.getElementById('thankYouModal').addEventListener('show.bs.modal', updateReservationNumber);
-
-  // Handle form submission
-  document.getElementById('reservationForm').addEventListener('submit', function(event) {
-    // Prevent form from submitting if validation fails
-    if (!this.checkValidity()) {
-      event.preventDefault(); // Prevent the form from submitting
-      event.stopPropagation(); // Stop further event propagation
-    } else {
-      // If the form is valid, show the modal
-      var modalInstance = new bootstrap.Modal(document.getElementById('thankYouModal'));
-      modalInstance.show();
-    }
-
-    this.classList.add('was-validated'); // Add validation feedback
-  }, false);
 </script>
-
+    </div>
 </body>
 </html>
