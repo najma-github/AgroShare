@@ -380,25 +380,6 @@
             </div>
         </div>
 
-<!-- <script>
-    function filterProducts() {
-        const province = document.getElementById('province').value;
-        const type = document.getElementById('type').value;
-
-        const productItems = document.querySelectorAll('.product-item');
-
-        productItems.forEach(item => {
-            const itemProvince = item.getAttribute('data-province');
-            const itemType = item.getAttribute('data-type');
-
-            if ((province === itemProvince || province === '') && (type === itemType || type === '')) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    }
-</script> -->
 <!-- Fruits Shop End -->
 
 
@@ -526,6 +507,42 @@
                 }
             });
         }
+    </script>
+
+<script>
+    function filterProducts() {
+        const province = document.getElementById('province').value;
+        const type = document.getElementById('type').value;
+        const productItems = document.querySelectorAll('.product-item');
+        const noProductsMessage = document.getElementById('no-products');
+        
+        let visibleProducts = 0;
+    
+        productItems.forEach(item => {
+            const itemProvince = item.getAttribute('data-province');
+            const itemType = item.getAttribute('data-type');
+    
+            if ((province === itemProvince || province === '') && (type === itemType || type === '')) {
+                item.style.display = 'block';
+                visibleProducts++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    
+        // Show "No Products" message for specific combinations
+        if (visibleProducts === 0 && 
+            ((province === 'northern-central' && type === 'vegetables') ||
+             (province === 'northern' && type === 'dairy') ||
+             (province === 'northern-central' && type === 'mixed'))) {
+            noProductsMessage.style.display = 'block';
+        } else {
+            noProductsMessage.style.display = 'none';
+        }
+    }
+    
+    // Call filterProducts when the page loads to set initial state
+    document.addEventListener('DOMContentLoaded', filterProducts);
     </script>
 
 </body>
