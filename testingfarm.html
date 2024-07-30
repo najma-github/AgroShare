@@ -229,19 +229,19 @@
 
         <!-- JavaScript to Handle Form Submission -->
         <script>
-    function handleSubmit(event) {
-        event.preventDefault();
-        const form = event.target;
-
-        if (form.checkValidity()) {
-            const modalInstance = new bootstrap.Modal(document.getElementById('thankYouModal'));
-            modalInstance.show();
-            form.reset();
-        } else {
-            form.classList.add('was-validated');
-        }
-    }
-</script>
+            function handleSubmit(event) {
+                event.preventDefault();
+                const form = event.target;
+        
+                if (form.checkValidity()) {
+                    const modalInstance = new bootstrap.Modal(document.getElementById('thankYouModal'));
+                    modalInstance.show();
+                    form.reset();
+                } else {
+                    form.classList.add('was-validated');
+                }
+            }
+        </script>
     </div>
 </body>
 </html>
