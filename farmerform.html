@@ -292,7 +292,7 @@
         // Import Firebase SDKs
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
         import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
-
+    
         // Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyDNt0sZwE-anzM0XePRfTtKSSDd7sb5vxg",
@@ -302,18 +302,18 @@
             messagingSenderId: "1027205635402",
             appId: "1:1027205635402:web:331c915d866dc7fb77b5b3"
         };
-
+    
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const db = getDatabase();
-
+    
         // Get form elements
         let farmName = document.getElementById('farmName');
         let farmProvince = document.getElementById('farmProvince');
         let productType = document.getElementById('productType');
         let productName = document.getElementById('productName');
         let Fsubmit = document.getElementById('Fsubmit');
-
+    
         // Add data to Firebase
         function AddData() {
             set(ref(db, 'FarmDetails/' + farmName.value), {
@@ -322,35 +322,24 @@
                 producttype: productType.value,
                 productName: productName.value
             })
-                .then(() => {
-                    // Show success modal
-                    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
-                    successModal.show();
-                })
-                .catch((error) => {
-                    // Show error modal
-                    const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
-                    errorModal.show();
-                });
+            .then(() => {
+                // Show success modal
+                const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+            })
+            .catch((error) => {
+                // Show error modal
+                const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                errorModal.show();
+            });
         }
-
+    
         // Attach event listener to the submit button
         Fsubmit.addEventListener('click', (event) => {
             event.preventDefault(); // Prevent the default form submission
             AddData(); // Call the AddData function
         });
-
-        // Handle form submission
-    //     form.addEventListener('submit', (event) => {
-    //         event.preventDefault(); // Prevent the default form submission
-
-    //         if (form.checkValidity()) {
-    //             AddData(); // Call the AddData function if form is valid
-    //         } else {
-    //             form.classList.add('was-validated'); // Add validation class if form is invalid
-    //         }
-    //     });
-   </script>
+    </script>
 
     <!-- JavaScript to Handle Form Submission -->
     <!-- <script>
