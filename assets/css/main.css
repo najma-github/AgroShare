@@ -2442,9 +2442,9 @@ body {
 /* Button for navigation menu */
 /* Custom styling for the button FILTER*/
 .buttonnavi {
-  background-color: #155724; /* Dark green background */
-  color: #fff; /* White text color */
-  font-weight: 500; /* Medium font weight */
+  background-color: #84ffa1; /* Dark green background */
+  color: #115303; /* White text color */
+  font-weight: 200; /* Medium font weight */
   border-radius: 9999px; /* Rounded corners */
   font-size: 0.875rem; /* Small text size */
   padding: 0.5em 1em; /* Padding inside the button */
@@ -2455,6 +2455,7 @@ body {
 
 .buttonnavi:hover {
   background-color: #004d00; /* Slightly darker green on hover */
+  color: #84ffa1;
 }
 
 .buttonnavi:focus {
