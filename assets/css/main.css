@@ -43,14 +43,17 @@
   color: #115303; /* Dark green text color */
   font-weight: 500; /* Medium font weight */
   border-radius: 50px; /* Rounded corners */
-  font-size: 1rem; /* Increased font size */
-  padding: 0.5em 1.5em; /* Adjusted padding */
+  font-size: 0.9rem; /* Slightly reduced font size */
+  padding: 0.3em 1.2em; /* Reduced padding, especially vertical */
   text-align: center; /* Center text inside the button */
   transition: all 0.2s ease-in-out; /* Smooth transition for all properties */
   border: none; /* Remove default border */
-  display: inline-block; /* Allows the button to size to its content */
+  display: inline-flex; /* Changed to inline-flex for better vertical centering */
+  align-items: center; /* Vertically center the text */
   white-space: nowrap; /* Prevents text from wrapping */
   min-width: max-content; /* Ensures the button is at least as wide as its content */
+  line-height: 1; /* Reduce line height */
+  height: 2em; /* Set a fixed height */
 }
 
 .buttonnavi:hover {
