@@ -60,11 +60,11 @@
 .buttonnavi:hover {
   background-color: #388b54; /* Darker green on hover */
   color: #ffffff !important;  /* White text on hover */
-  border-color: #fffb11;
+  border-color: #fffb11cc;
 }
 
 .buttonnavi:focus {
-  outline:  #fffb11; /* Remove default outline */
+  outline: #fffb11cc; /* Remove default outline */
   box-shadow: 0 0 0 4px rgba(29, 155, 37, 0.4); /* Green focus ring */
 }
 
