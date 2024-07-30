@@ -39,20 +39,23 @@
 
 /* Button for navigation menu */
 .buttonnavi {
-  background-color: #84ffa1; /* Dark green background */
-  color: #115303; /* White text color */
-  font-weight: 200; /* Medium font weight */
-  border-radius: 100px; /* Rounded corners */
-  font-size: 0.1rem; /* Small text size */
-  padding: 0.5em 1em; /* Padding inside the button */
+  background-color: #84ffa1; /* Light green background */
+  color: #115303; /* Dark green text color */
+  font-weight: 500; /* Medium font weight */
+  border-radius: 50px; /* Rounded corners */
+  font-size: 1rem; /* Increased font size */
+  padding: 0.5em 1.5em; /* Adjusted padding */
   text-align: center; /* Center text inside the button */
-  transition: background-color 0.2s ease-in-out; /* Smooth transition for background color */
+  transition: all 0.2s ease-in-out; /* Smooth transition for all properties */
   border: none; /* Remove default border */
+  display: inline-block; /* Allows the button to size to its content */
+  white-space: nowrap; /* Prevents text from wrapping */
+  min-width: max-content; /* Ensures the button is at least as wide as its content */
 }
 
 .buttonnavi:hover {
-  background-color: #004d00; /* Slightly darker green on hover */
-  color: #ffffff;
+  background-color: #004d00; /* Darker green on hover */
+  color: #ffffff; /* White text on hover */
 }
 
 .buttonnavi:focus {
