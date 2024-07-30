@@ -312,6 +312,8 @@
         let farmProvince = document.getElementById('farmProvince');
         let productType = document.getElementById('productType');
         let productName = document.getElementById('productName');
+        let productImage = document.getElementById('productImage');
+        let form = document.getElementById('censusForm');
         let Fsubmit = document.getElementById('Fsubmit');
     
         // Add data to Firebase
@@ -326,6 +328,7 @@
                 // Show success modal
                 const successModal = new bootstrap.Modal(document.getElementById('successModal'));
                 successModal.show();
+                form.reset(); // Reset the form after successful submission
             })
             .catch((error) => {
                 // Show error modal
@@ -337,7 +340,17 @@
         // Attach event listener to the submit button
         Fsubmit.addEventListener('click', (event) => {
             event.preventDefault(); // Prevent the default form submission
-            AddData(); // Call the AddData function
+            
+            // Check if all required fields are filled
+            if (form.checkValidity()) {
+                AddData(); // Call the AddData function if form is valid
+            } else {
+                // If form is invalid, show validation messages
+                form.classList.add('was-validated');
+                
+                // You can also add a custom alert here if you want
+                alert("Please fill in all required fields before submitting.");
+            }
         });
 
         // Handle form submission
@@ -350,6 +363,7 @@
     //         form.classList.add('was-validated'); // Add validation class if form is invalid
     //     }
     // });
+    
     </script>
 
 
