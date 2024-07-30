@@ -326,12 +326,12 @@
     
         // Add data to Firebase
         function AddData() {
-            set(ref(db, 'FarmDetails/'), {
+            set(ref(db, 'FarmDetails/' + productID.value), {
                 farmname: farmName.value,
                 farmprovince: farmProvince.value,
                 producttype: productType.value,
                 productName: productName.value,
-                productID: productID
+                productID: productID.value
             })
             .then(() => {
                 // Show success modal
