@@ -51,7 +51,7 @@
   display: inline-flex; /* Changed to inline-flex for better vertical centering */
   align-items: center; /* Vertically center the text */
   white-space: nowrap; /* Prevents text from wrapping */
-  min-width: max-content; /* Ensures the button is at least as wide as its content */
+  min-width: 120px; /* Ensures the button is at least as wide as its content */
   line-height: 1; /* Reduce line height */
   height: 2em; /* Set a fixed height */
 }
