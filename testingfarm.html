@@ -150,18 +150,27 @@
                             </div>
 
                             <div data-mdb-input-init class="form-outline mb-4">
-                                <label class="form-label" for="farmProvince" style="font-weight: bold;">Farm
-                                    Province</label>
-                                <input type="text" name="farmProvince" class="form-control"
-                                    placeholder="Enter the Province of The Farm" id="farmProvince" required>
-                                <div class="invalid-feedback">Please enter the province of the farm.</div>
-                            </div>
+                                <label class="form-label" for="farmProvince" style="font-weight: bold;">Farm Province</label>
+                                <select name="farmProvince" class="form-control" id="farmProvince" required>
+                                    <option value="" disabled selected hidden>Select Province</option>
+                                    <option value="Central">Central</option>
+                                    <option value="Eastern">Eastern</option>
+                                    <option value="North Central">North Central</option>
+                                    <option value="Northern">Northern</option>
+                                    <option value="North Western">North Western</option>
+                                    <option value="Sabaragamuwa">Sabaragamuwa</option>
+                                    <option value="Southern">Southern</option>
+                                    <option value="Uva">Uva</option>
+                                    <option value="Western">Western</option>
+                                </select>
+                                <div class="invalid-feedback">Please select the province of the farm.</div>
+                            </div>                            
 
                             <div data-mdb-input-init class="form-outline mb-4">
                                 <label class="form-label" for="productType" style="font-weight: bold;">Product
                                     Type</label>
                                 <select class="form-control" name="productType" id="productType" required>
-                                    <option value="" disabled selected>Select Product Type</option>
+                                    <option value="" disabled selected hidden>Select Product Type</option>
                                     <option value="fruits">Fruits</option>
                                     <option value="vegetables">Vegetables</option>
                                     <option value="dairy">Dairy Products</option>
