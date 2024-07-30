@@ -46,217 +46,267 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
-    </head>
-    
-    <body class="index-page">
-    
-        <header id="header" class="header d-flex align-items-center position-relative">
-            <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-                <a href="index.html" class="logo d-flex align-items-center">
-                    <img src="assets/img/logo.png" alt="AgriCulture">
-                </a>
-                <nav id="navmenu" class="navmenu">
-                    <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-                </nav>
-            </div>
-        </header>
-    
-        <div class="page-title dark-background" data-aos="fade"
-            style="background-image: url(assets/img/page-title-bg.webp);">
-            <div class="container position-relative">
-                <h1>Explore & Get Your Surprise Bags!</h1>
-            </div>
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center position-relative">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="assets/img/logo.png" alt="AgriCulture">
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
         </div>
+    </header>
+
+    <div class="page-title dark-background" data-aos="fade"
+        style="background-image: url(assets/img/page-title-bg.webp);">
+        <div class="container position-relative">
+            <h1>Explore & Get Your Surprise Bags!</h1>
+        </div>
+    </div>
 
     <!-- Fruits Shop Start-->
-<div class="container-fluid fruite py-30" style="padding-top: 10px;">
-    <div class="container py-0">
-        <div class="row g-4">
-            <div class="col-lg-12">
-                <div class="row g-4">
-                    <div class="container mx-auto py-5">
-                        <div class="d-flex">
-                            <div class="d-flex custom-select mx-2">
-                                <select id="province" class="form-control-product mx-2">
-                                    <option value="" disabled selected hidden>Select Province</option>
-                                    <option value="northern">Northern</option>
-                                    <option value="northern-central">Northern Central</option>
-                                    <option value="northern-western">Northern Western</option>
-                                </select>
-                                <select id="type" class="form-control-product">
-                                    <option value="" disabled selected hidden>Select Type</option>
-                                    <option value="fruits">Fruits</option>
-                                    <option value="vegetables">Vegetables</option>
-                                    <option value="dairy">Dairy</option>
-                                    <option value="mixed">Mixed</option>
-                                </select>
-                            </div>
-                            <div>
-                                <button type="button" onclick="filterProducts()" class="btn-filter">Filter</button>
+    <div class="container-fluid fruite py-30" style="padding-top: 10px;">
+        <div class="container py-0">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="row g-4">
+                        <div class="container mx-auto py-5">
+                            <div class="d-flex">
+                                <div class="d-flex custom-select mx-2">
+                                    <select id="province" class="form-control-product mx-2">
+                                        <option value="" disabled selected hidden>Select Province</option>
+                                        <option value="northern">Northern</option>
+                                        <option value="northern-central">Northern Central</option>
+                                        <option value="northern-western">Northern Western</option>
+                                    </select>
+                                    <select id="type" class="form-control-product">
+                                        <option value="" disabled selected hidden>Select Type</option>
+                                        <option value="fruits">Fruits</option>
+                                        <option value="vegetables">Vegetables</option>
+                                        <option value="dairy">Dairy</option>
+                                        <option value="mixed">Mixed</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button type="button" onclick="filterProducts()" class="btn-filter">Filter</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-3">
-                        <div class="row g-4"></div>
-                    </div>
-                    <div class="col-lg-13">
-                        <div class="row g-4 justify-content-center" id="product-container">
-                            <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern" data-type="fruits">
-                                <div class="rounded position-relative fruite-item">
-                                    <div class="fruite-img">
-                                        <img src="img/Copahagen's-suprise-bag-1.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Fruits</div>
-                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
-                                        <h4 style="font-weight: bold; color: #004d00;">Fruitful Delights</h4>
-                                        <p style="margin-bottom: 64.6px;">Copenhagen's Surprise Bag</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <a href="fruitful-delights.html" class="btn border border-secondary rounded-pill px-3 text-primary" target="_blank">
-                                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap
-                                            </a>
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            <div class="row g-4"></div>
+                        </div>
+                        <div class="col-lg-13">
+                            <div class="row g-4 justify-content-center" id="product-container">
+                                <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern"
+                                    data-type="fruits">
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            <img src="img/Copahagen's-suprise-bag-1.jpeg"
+                                                class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white px-3 py-1 rounded position-absolute"
+                                            style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Fruits
+                                        </div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom"
+                                            style="background-color: #c3e6cb;">
+                                            <h4 style="font-weight: bold; color: #004d00;">Fruitful Delights</h4>
+                                            <p style="margin-bottom: 64.6px;">Copenhagen's Surprise Bag</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <a href="fruitful-delights.html"
+                                                    class="btn border border-secondary rounded-pill px-3 text-primary"
+                                                    target="_blank">
+                                                    <i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern-western" data-type="vegetables">
-                                <div class="rounded position-relative fruite-item">
-                                    <div class="fruite-img">
-                                        <img src="img/Walagolla-1.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Vegetables</div>
-                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
-                                        <h4 style="font-weight: bold; color: #004d00;">Veggie Vault</h4>
-                                        <p style="margin-bottom: 64.6px;">Wagolla Farm's Surprise Bag</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
+                                <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern-western"
+                                    data-type="vegetables">
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            <img src="img/Walagolla-1.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white px-3 py-1 rounded position-absolute"
+                                            style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Vegetables
+                                        </div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom"
+                                            style="background-color: #c3e6cb;">
+                                            <h4 style="font-weight: bold; color: #004d00;">Veggie Vault</h4>
+                                            <p style="margin-bottom: 64.6px;">Wagolla Farm's Surprise Bag</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <a href="#"
+                                                    class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern-western" data-type="dairy">
-                                <div class="rounded position-relative fruite-item">
-                                    <div class="fruite-img">
-                                        <img src="img/mnafarm-1.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Dairy</div>
-                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
-                                        <h4 style="font-weight: bold; color: #004d00;">Milk & More</h4>
-                                        <p style="margin-bottom: 64.6px;">MNA Farm's Surprise Bag</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
+                                <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern-western"
+                                    data-type="dairy">
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            <img src="img/mnafarm-1.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white px-3 py-1 rounded position-absolute"
+                                            style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Dairy
+                                        </div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom"
+                                            style="background-color: #c3e6cb;">
+                                            <h4 style="font-weight: bold; color: #004d00;">Milk & More</h4>
+                                            <p style="margin-bottom: 64.6px;">MNA Farm's Surprise Bag</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <a href="#"
+                                                    class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern" data-type="mixed">
-                                <div class="rounded position-relative fruite-item">
-                                    <div class="fruite-img">
-                                        <img src="img/fruite-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Mixed</div>
-                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
-                                        <h4 style="font-weight: bold; color: #004d00;">Fresh Fusion Bundle</h4>
-                                        <p style="margin-bottom: 64.6px;">Midigama's Surprise Bag</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
+                                <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern"
+                                    data-type="mixed">
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            <img src="img/fruite-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white px-3 py-1 rounded position-absolute"
+                                            style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Mixed
+                                        </div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom"
+                                            style="background-color: #c3e6cb;">
+                                            <h4 style="font-weight: bold; color: #004d00;">Fresh Fusion Bundle</h4>
+                                            <p style="margin-bottom: 64.6px;">Midigama's Surprise Bag</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <a href="#"
+                                                    class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern" data-type="vegetables">
-                                <div class="rounded position-relative fruite-item">
-                                    <div class="fruite-img">
-                                        <img src="img/fruite-item-3.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Vegetables</div>
-                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
-                                        <h4 style="font-weight: bold; color: #004d00;">Veggie Treasure</h4>
-                                        <p style="margin-bottom: 64.6px;">Green Joys's Surprise Bag</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
-                                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap
-                                            </a>
+                                <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern"
+                                    data-type="vegetables">
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            <img src="img/fruite-item-3.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white px-3 py-1 rounded position-absolute"
+                                            style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Vegetables
+                                        </div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom"
+                                            style="background-color: #c3e6cb;">
+                                            <h4 style="font-weight: bold; color: #004d00;">Veggie Treasure</h4>
+                                            <p style="margin-bottom: 64.6px;">Green Joys's Surprise Bag</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <a href="#"
+                                                    class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                    <i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern" data-type="fruits">
-                                <div class="rounded position-relative fruite-item">
-                                    <div class="fruite-img">
-                                        <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Fruits</div>
-                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
-                                        <h4 style="font-weight: bold; color: #004d00;">Fruit Fantasy</h4>
-                                        <p style="margin-bottom: 64.6px;">Midigama's Surprise Bag</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
-                                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap
-                                            </a>
+                                <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern"
+                                    data-type="fruits">
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white px-3 py-1 rounded position-absolute"
+                                            style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Fruits
+                                        </div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom"
+                                            style="background-color: #c3e6cb;">
+                                            <h4 style="font-weight: bold; color: #004d00;">Fruit Fantasy</h4>
+                                            <p style="margin-bottom: 64.6px;">Midigama's Surprise Bag</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <a href="#"
+                                                    class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                    <i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern-western" data-type="mixed">
-                                <div class="rounded position-relative fruite-item">
-                                    <div class="fruite-img">
-                                        <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Mixed</div>
-                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
-                                        <h4 style="font-weight: bold; color: #004d00;">Whole Food Wonder</h4>
-                                        <p style="margin-bottom: 64.6px;">Midigama's Surprise Bag</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
-                                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap
-                                            </a>
+                                <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern-western"
+                                    data-type="mixed">
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white px-3 py-1 rounded position-absolute"
+                                            style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Mixed
+                                        </div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom"
+                                            style="background-color: #c3e6cb;">
+                                            <h4 style="font-weight: bold; color: #004d00;">Whole Food Wonder</h4>
+                                            <p style="margin-bottom: 64.6px;">Midigama's Surprise Bag</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <a href="#"
+                                                    class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                    <i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern-central" data-type="dairy">
-                                <div class="rounded position-relative fruite-item">
-                                    <div class="fruite-img">
-                                        <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Dairy</div>
-                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
-                                        <h4 style="font-weight: bold; color: #004d00;">Dairy Essentials</h4>
-                                        <p style="margin-bottom: 64.6px;">Royal Dairy Farm's Surprise Bag</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
-                                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap
-                                            </a>
+                                <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern-central"
+                                    data-type="dairy">
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white px-3 py-1 rounded position-absolute"
+                                            style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Dairy
+                                        </div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom"
+                                            style="background-color: #c3e6cb;">
+                                            <h4 style="font-weight: bold; color: #004d00;">Dairy Essentials</h4>
+                                            <p style="margin-bottom: 64.6px;">Royal Dairy Farm's Surprise Bag</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <a href="#"
+                                                    class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                    <i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern-central" data-type="fruits">
-                                <div class="rounded position-relative fruite-item">
-                                    <div class="fruite-img">
-                                        <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                    </div>
-                                    <div class="text-white px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Fruits</div>
-                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom" style="background-color: #c3e6cb;">
-                                        <h4 style="font-weight: bold; color: #004d00;">Fruit Frenzy</h4>
-                                        <p style="margin-bottom: 64.6px;">Jagro's Surprise Bag</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
-                                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap
-                                            </a>
+                                <div class="col-md-6 col-lg-6 col-xl-4 product-item" data-province="northern-central"
+                                    data-type="fruits">
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white px-3 py-1 rounded position-absolute"
+                                            style="top: 10px; left: 10px; background-color: rgb(241, 90, 3);">Fruits
+                                        </div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom"
+                                            style="background-color: #c3e6cb;">
+                                            <h4 style="font-weight: bold; color: #004d00;">Fruit Frenzy</h4>
+                                            <p style="margin-bottom: 64.6px;">Jagro's Surprise Bag</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <a href="#"
+                                                    class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                    <i class="fa fa-shopping-bag me-2 text-primary"></i> Unwrap
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- No products -->
-                        
-                            <!-- </div>
+                                    <!-- No products -->
+
+                                    <!-- </div>
                             <div class="col-lg-13">
                                 <div class="row g-4 justify-content-center" id="product-container">
                                     <div id="no-products" class="col-md-12" style="display: none;">
@@ -301,25 +351,27 @@
                                 </div>
                             </div>
                          -->
-                         <div id="no-products" class="col-md-12" style="display: none;">
-                            <p style="font-weight: bold; color: #f01818; text-align: center;">
-                                Sorry! No Products For The Selected Province
-                            </p>
-                        </div>
+                                    <div id="no-products" class="col-md-12" style="display: none;">
+                                        <p style="font-weight: bold; color: #f01818; text-align: center;">
+                                            Sorry! No Products For The Selected Province
+                                        </p>
+                                    </div>
 
 
 
-                            
-                            <div class="col-12">
-                                <div class="pagination d-flex justify-content-center mt-5 mb-5">
-                                    <a href="#" class="rounded">&laquo;</a>
-                                    <a href="#" class="active rounded">1</a>
-                                    <a href="#" class="rounded">2</a>
-                                    <a href="#" class="rounded">3</a>
-                                    <a href="#" class="rounded">4</a>
-                                    <a href="#" class="rounded">5</a>
-                                    <a href="#" class="rounded">6</a>
-                                    <a href="#" class="rounded">&raquo;</a>
+
+                                    <div class="col-12">
+                                        <div class="pagination d-flex justify-content-center mt-5 mb-5">
+                                            <a href="#" class="rounded">&laquo;</a>
+                                            <a href="#" class="active rounded">1</a>
+                                            <a href="#" class="rounded">2</a>
+                                            <a href="#" class="rounded">3</a>
+                                            <a href="#" class="rounded">4</a>
+                                            <a href="#" class="rounded">5</a>
+                                            <a href="#" class="rounded">6</a>
+                                            <a href="#" class="rounded">&raquo;</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -327,10 +379,8 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<script>
+<!-- <script>
     function filterProducts() {
         const province = document.getElementById('province').value;
         const type = document.getElementById('type').value;
@@ -348,7 +398,7 @@
             }
         });
     }
-</script>
+</script> -->
 <!-- Fruits Shop End -->
 
 
