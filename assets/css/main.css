@@ -68,7 +68,7 @@
 
 /* Ensure consistent spacing between items in the navigation lists */
 .nav-list-left li, .nav-list-right li {
-  margin: 0;
+  margin: 4;
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
