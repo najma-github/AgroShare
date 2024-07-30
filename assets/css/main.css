@@ -2439,3 +2439,21 @@ body {
   box-shadow: 0 0 0 4px rgba(29, 155, 37, 0.4); /* Green focus ring */
 }
 
+/* Button for navigation menu */
+.buttonnavi {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* Blue background */
+    border: none;
+    border-radius: 0.25rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.buttonnavi:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
