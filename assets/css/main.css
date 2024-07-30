@@ -43,6 +43,7 @@
   color: #115303; /* Dark green text color */
   font-weight: 500; /* Medium font weight */
   border-radius: 50px; /* Rounded corners */
+  border-color: #fffb11;
   font-size: 0.9rem; /* Slightly reduced font size */
   padding: 0.3em 1.2em; /* Reduced padding, especially vertical */
   text-align: center; /* Center text inside the button */
