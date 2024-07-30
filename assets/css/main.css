@@ -68,7 +68,7 @@
 
 /* Ensure consistent spacing between items in the navigation lists */
 .nav-list-left li {
-  margin: 2;
+  margin: 4;
 }
 
 .nav-list-right{
