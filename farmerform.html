@@ -137,6 +137,42 @@
             </div>
         </header>
 
+        <!-- HTML for Success Modal -->
+        <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="successModalLabel">Success</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Your data has been saved successfully.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- HTML for Error Modal -->
+        <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="errorModalLabel">Error</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        There was an error saving your data. Please try again.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <main id="main" class="main">
             <div class="container" style="width: 100%;">
                 <div class="row justify-content-center mt-5">
@@ -239,18 +275,18 @@
     <script src="assets/js/main.js"></script>
 
     <!-- Modal Structure -->
-    <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-body text-center">
+                <div class="modal-body text-center"> -->
                     <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-                    <h5 class="modal-title" id="thankYouModalLabel">Thank you for your submission!</h5>
+                    <!-- <h5 class="modal-title" id="thankYouModalLabel">Thank you for your submission!</h5>
                     <div class="modal-body">We will review and confirm your submission. <br> <strong style="color: red;">Within next 48 hours</strong></div>
                     <button type="button" class="btn btn-close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script type="module">
         // Import Firebase SDKs
