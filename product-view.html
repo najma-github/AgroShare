@@ -471,7 +471,28 @@
                 }
             });
         }
+
+
+        document.getElementById('province-select').addEventListener('change', filterProducts);
+        document.getElementById('type-select').addEventListener('change', filterProducts);
+
+        function filterProducts() {
+            const province = document.getElementById('province-select').value;
+            const type = document.getElementById('type-select').value;
+
+            const items = document.querySelectorAll('.product-item');
+            items.forEach(item => {
+                if (item.getAttribute('data-province') === province && item.getAttribute('data-type') === type) {
+                    item.removeAttribute('hidden');
+                } else {
+                    item.setAttribute('hidden', true);
+                }
+            });
+        }
+
+
     </script>
+
 </body>
 
 </html>
